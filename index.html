@@ -46,7 +46,7 @@
                     <h6>Currently I'm a...</h6>
                     <ul class ="collapsible">
                         <li class="active">
-                            <div class="collapsible-header"><i class="mdi-social-domain"></i>Researcher</div>
+                            <div class="collapsible-header"><i class="mdi-social-domain">Researcher</i></div>
                             <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
                         </li>
                         <li>
@@ -119,7 +119,7 @@
         <footer>
             <div class="footer-copyright">
                 <div class="container">
-                    © 2014 Izzy Gomez
+                    © 2014 Izzy Gomez, with &lt;3 to <a href="http://namecheap.com">NameCheap</a>, <a href="https://www.cloudflare.com">CloudFlare</a>, and <a href="https://pages.github.com/">GitHub Pages</a>
                     <a class="grey-text text-lighten-4 right" href="#!">Link</a>
                 </div>
             </div>
@@ -128,5 +128,13 @@
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.materialboxed').materialbox();
+            });
+            $(document).ready(function(){
+                $('.collapsible').collapsible();
+            });
+        </script>
     </body>
 </html>
