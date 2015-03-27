@@ -2162,14 +2162,16 @@ ul.staggered-list li {
 
 footer.page-footer {
   margin-top: 20px;
-  padding-top: 20px;
+  padding-top: 0px; /*used to be 20px*/
   background-color: #ee6e73; }
   footer.page-footer .footer-copyright {
     overflow: hidden;
-    height: 50px;
+    height: 50px; 
     line-height: 50px;
-    color: rgba(255, 255, 255, 0.8);
-    background-color: rgba(51, 51, 51, 0.08); }
+    color: rgba(255, 255, 255, 1.0); /*used to be rgba(255, 255, 255, 0.8)*/
+    background-color: #81d4fa; /*used to be rgba(51, 51, 51, 0.08)*/
+    text-align: center; /*used to not be here*/
+  } 
 
 table, th, td {
   border: none; }
@@ -4818,7 +4820,7 @@ span.badge {
     display: table;
     clear: both; }
   .row .col {
-    float: left;
+    float: left;f
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
