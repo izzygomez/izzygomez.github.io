@@ -1,0 +1,32 @@
+# Setup
+title:               Izzy Gomez
+tagline:             ~ huh
+url:                 http://izzygomez.com
+baseurl:             ""
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              Izzy Gomez
+  url:               http://izzygomez.com
+  email:             izzyg@mit.edu
+
+# Custom vars
+version:             2.0.0
+github:
+  repo:              https://github.com/poole/poole
+
+# I added this - Izzy
+defaults:
+   -
+     scope:
+       path: ""
+       type: "posts"
+     values:
+       permalink: /:title
