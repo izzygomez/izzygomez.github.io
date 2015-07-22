@@ -1,6 +1,6 @@
 ---
 layout: page
-title: huh
+title: huh?
 ---
 
 <p class="message">

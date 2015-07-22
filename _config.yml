@@ -1,8 +1,7 @@
 # Setup
 title:               Izzy Gomez
-tagline:             ~ huh
+tagline:             
 url:                 http://izzygomez.com
-baseurl:             ""
 
 # Assets
 #
@@ -17,16 +16,17 @@ author:
   url:               http://izzygomez.com
   email:             izzyg@mit.edu
 
-# Custom vars
-version:             2.0.0
-github:
-  repo:              https://github.com/poole/poole
-
 # I added this - Izzy
 defaults:
-   -
-     scope:
-       path: ""
-       type: "posts"
-     values:
-       permalink: /:title
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      permalink: /blog/:title/
+  -  
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      permalink: 
