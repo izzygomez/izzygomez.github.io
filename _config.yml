@@ -15,18 +15,3 @@ author:
   name:              Izzy Gomez
   url:               http://izzygomez.com
   email:             izzyg@mit.edu
-
-# I added this - Izzy
-# defaults:
-#   -
-#     scope:
-#       path: ""
-#       type: "posts"
-#     values:
-#       permalink: /blog/:title
-#   -  
-#     scope:
-#       path: ""
-#       type: "pages"
-#     values:
-#       permalink: 
