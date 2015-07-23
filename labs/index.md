@@ -3,4 +3,6 @@ layout: page
 title: labs
 ---
 
-TODO list projects and experiments
+Collection of coding projects and experiments.
+
+* [Playing around with Three.js](three/)
