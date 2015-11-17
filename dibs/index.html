@@ -94,7 +94,7 @@
     		// init list string
     		eventListString = ''
 
-    		var rightNow = new Date();
+    		var rightNow = Date.now(); // in ms since Jan 1, 1970 00:00:00 UTC
 
     		// go through events, and add as list item
     		for (var i = 0; i < userEvents.length; i++) {
@@ -102,7 +102,7 @@
     			currEventDate = new Date(currentEvent.start_time.substring(0,19));
 
     			// current event has not started (in the future)
-    			if (currEventDate.value - rightNow.value >= 0) {
+    			if (Date.parse(currEventDate) - rightNow >= 0) {
     				eventListString = '<li>' + currentEvent.name + ', taking place on ' + currentEvent.start_time + '</li>' + eventListString;
     			}
     		}
