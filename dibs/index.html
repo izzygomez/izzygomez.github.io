@@ -90,14 +90,25 @@
     	if (response && !response.error) {
     		// get user events
     		var userEvents = response.data;
+
     		// init list string
-    		eventListString = 'Your current events: <ul>'
+    		eventListString = ''
+
+    		var rightNow = new Date();
+
     		// go through events, and add as list item
     		for (var i = 0; i < userEvents.length; i++) {
-    			currentEvent = userEvents[i]
-    			eventListString = eventListString + '<li>' + currentEvent.name + ', taking place at ' + currentEvent.start_time + '</li>';
+    			currentEvent = userEvents[i];
+    			currEventDate = new Date(currentEvent.start_time.substring(0,19));
+
+    			// current event has not started (in the future)
+    			if (currEventDate.value - rightNow.value >= 0) {
+    				eventListString = '<li>' + currentEvent.name + ', taking place on ' + currentEvent.start_time + '</li>' + eventListString;
+    			}
     		}
-    		eventListString = eventListString + '</ul>'
+
+    		eventListString = 'Your current events: <ul>' + eventListString + '</ul>'
+
     		// add to DOM
     		document.getElementById('event_listing').innerHTML = eventListString;
     	}
