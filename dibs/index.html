@@ -88,8 +88,18 @@
 
     FB.api('/me/events', function (response) {
     	if (response && !response.error) {
-    		/* handle the result */
-    		console.log("User events: " + response.data);
+    		// get user events
+    		var userEvents = response.data;
+    		// init list string
+    		eventListString = response.name + '\'s current events: <ul>'
+    		// go through events, and add as list item
+    		for (var i = 0; i < userEvents.length; i++) {
+    			currentEvent = userEvents[i]
+    			eventListString = eventListString + '&lt;li&gt;' + currentEvent.name + ', taking place at ' + currentEvent.start_time + '&lt;/li&gt;';
+    		}
+    		eventListString = eventListString + '&lt;/ul&gt;'
+    		// add to DOM
+    		document.getElementById('event_listing').innerHTML = eventListString;
     	}
     });
   }
@@ -127,5 +137,6 @@
 	<fb:login-button scope="public_profile,email,user_events" onlogin="checkLoginState();"></fb:login-button>
 
 	<div id="status"></div>
+	<div id="event_listing"></div>
 </body>
 </html>
