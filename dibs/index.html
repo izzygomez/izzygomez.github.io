@@ -44,7 +44,7 @@
     cookie     : true,  // enable cookies to allow the server to access 
                         // the session
     xfbml      : true,  // parse social plugins on this page
-    version    : 'v2.2' // use version 2.2
+    version    : 'v2.4' // use version 2.4
   });
 
   // Now that we've initialized the JavaScript SDK, we call 
@@ -80,8 +80,9 @@
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
+      console.log('authResponse:' + response.authResponse)
       document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
+        'Thanks for logging in, ' + response.name + '! <3';
     });
   }
 </script>
