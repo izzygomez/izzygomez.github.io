@@ -81,9 +81,8 @@
 
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
-      console.log('authResponse:' + response.authResponse)
       document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '! <3';
+        'Thanks for logging in, ' + response.name + '! &hearts';
     });
 
     FB.api('/me/events', function (response) {
