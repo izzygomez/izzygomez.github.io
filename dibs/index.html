@@ -91,13 +91,13 @@
     		// get user events
     		var userEvents = response.data;
     		// init list string
-    		eventListString = response.name + '\'s current events: <ul>'
+    		eventListString = 'Your current events: <ul>'
     		// go through events, and add as list item
     		for (var i = 0; i < userEvents.length; i++) {
     			currentEvent = userEvents[i]
-    			eventListString = eventListString + '&lt;li&gt;' + currentEvent.name + ', taking place at ' + currentEvent.start_time + '&lt;/li&gt;';
+    			eventListString = eventListString + '<li>' + currentEvent.name + ', taking place at ' + currentEvent.start_time + '</li>';
     		}
-    		eventListString = eventListString + '&lt;/ul&gt;'
+    		eventListString = eventListString + '</ul>'
     		// add to DOM
     		document.getElementById('event_listing').innerHTML = eventListString;
     	}
