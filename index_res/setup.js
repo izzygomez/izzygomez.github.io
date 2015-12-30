@@ -142,6 +142,6 @@ particlesJS("particles-js", {
     $("body").css("color", "#42210b"); // text dark maroon
     $("a,a:visited").css("color", "#42210b"); // also links dark maroon
     $("body").css("background", "#fff4dd"); // background to beige
-    $(".section h3, .section:last-child").css("color", "#ecac80"); // h3/last-child to light grey
+    $(".section h3, .section:last-child").css("color", "#ecac80"); // h3/last-child to light orange
   });  
 })();
