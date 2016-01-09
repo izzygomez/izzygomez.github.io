@@ -1,7 +1,8 @@
 /** Importing fonts and setting the stage for entire document **/
 @import url("http://fonts.googleapis.com/css?family=Vollkorn|VT323");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 body {
-    font-family: "Vollkorn", Georgia, "Times New Roman", Times, serif;
+    font-family: "Roboto", "Vollkorn", Georgia, "Times New Roman", Times, serif;
     background: #fff4dd;
     color: #42210b
 }
