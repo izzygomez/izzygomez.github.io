@@ -1,0 +1,12 @@
+---
+layout: page
+title: Blog
+---
+
+<p>> thoughts</p>
+
+<ul>
+{% for post in site.posts %}
+<li>{{ post.date | date_to_string }} &middot; <a href="{{post.url}}">{{ post.title }}</a> </li>
+{% endfor %}
+</ul>
