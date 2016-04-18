@@ -12,7 +12,7 @@ permalink: blog/algorithms
 - TODO make sections collapsible
 
 <script type="text/javascript"
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 ## From CLRS (v3):
@@ -21,7 +21,7 @@ permalink: blog/algorithms
 
 *Problem Statement*: Design a function that runs in $$ \mathcal{O}(n \cdot lg(n)) $$ time that has as input an array $$S$$ of distinct integers and integer $$x$$ and returns a boolean indicating whether there exist values $$ a, b \in S $$ such that $$ a + b = x $$.
 
-*Solution and proof of correctness*: 
+*Solution and proof of correctness*:
 
 {% highlight python %}
 def solution(S, x):
