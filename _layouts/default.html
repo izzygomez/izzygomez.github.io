@@ -4,16 +4,16 @@
   {% include head.html %}
 
   <body>
-    <div class="container content">
-      {% include header.html %}
+    <div id="particles-js"></div>
 
-      <main>
-        {{ content }}
-      </main>
-      
+      <div class="container">
+      {{ content }}
       {% include footer.html %}
-
     </div>
+
+    <script type="text/javascript" src="js/particles.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/setup.js"></script>
 
   </body>
 </html>

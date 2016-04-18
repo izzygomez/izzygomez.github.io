@@ -1,17 +1,10 @@
 # Setup
 title:               Izzy Gomez
-tagline:             human hacker
-url:                 http://izzygomez.com
-
-# Assets
-#
-# We specify the directory for Jekyll so we can use @imports.
-sass:
-  sass_dir:          _sass
-  style:            :compressed
+tagline:             yo
+url:                 https://izzygomez.com
 
 # About/contact
 author:
   name:              Izzy Gomez
   url:               http://izzygomez.com
-  email:             izzyg@mit.edu
+  email:             izzygmit@gmail.com
