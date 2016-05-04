@@ -118,7 +118,7 @@ particlesJS("particles-js", {
 
     // Make changes to CSS
     $("body").css("color", "#000"); // text black
-    $("a,a:visited").css("color", "#000"); // also links black
+    $("a,a\\:visited").css("color", "#000"); // also links black
     $("body").css("background", "#fff"); // background white
     $(".section h3, .section:last-child").css("color", "#aaa"); // h3/last-child to light grey
   });
@@ -129,7 +129,7 @@ particlesJS("particles-js", {
 
     // Make changes to CSS
     $("body").css("color", "#fff"); // text white
-    $("a,a:visited").css("color", "#fff"); // also links white
+    $("a,a\\:visited").css("color", "#fff"); // also links white
     $("body").css("background", "#222222"); // background dark grey
     $(".section h3, .section:last-child").css("color", "#aaa"); // h3/last-child to light grey
   });
@@ -140,8 +140,8 @@ particlesJS("particles-js", {
 
     // Make changes to CSS
     $("body").css("color", "#42210b"); // text dark maroon
-    $("a,a:visited").css("color", "#42210b"); // also links dark maroon
+    $("a,a\\:visited").css("color", "#42210b"); // also links dark maroon
     $("body").css("background", "#fff4dd"); // background to beige
     $(".section h3, .section:last-child").css("color", "#ecac80"); // h3/last-child to light orange
-  });  
+  });
 })();
