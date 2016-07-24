@@ -4,7 +4,7 @@ https://keybase.io/izzy
 
 I hereby claim:
 
-  * I am an admin of https://izzygomez.com
+  * I am an admin of https://izzy.gg
   * I am izzy (https://keybase.io/izzy) on keybase.
   * I have a public key with fingerprint 706B D6B6 2427 A95D A826  F0B4 328F BD3D 37A4 5C47
 
@@ -21,17 +21,22 @@ To do so, I am signing this object:
             "uid": "7c7b6b57db3880fc0b4157c962100119",
             "username": "izzy"
         },
+        "revoke": {
+            "sig_ids": [
+                "a9196991e6b41bcd16fad9444b74345cf078da23b0f07a1c97afcc674728155c0f"
+            ]
+        },
         "service": {
-            "hostname": "izzygomez.com",
+            "hostname": "izzy.gg",
             "protocol": "https:"
         },
         "type": "web_service_binding",
         "version": 1
     },
-    "ctime": 1461785892,
+    "ctime": 1469397481,
     "expire_in": 157680000,
-    "prev": "d6fb36bcc267964d8bfcada3c58fefa6345704e5258e7f86b1744dfe38e0a3e6",
-    "seqno": 5,
+    "prev": "c94e30b7b5758df4d49e09aad8a24b142e3680460e1f4daf0cc53ba9671c8815",
+    "seqno": 9,
     "tag": "signature"
 }
 
@@ -41,23 +46,24 @@ which yields the signature:
 Version: Keybase OpenPGP v2.0.53
 Comment: https://keybase.io/crypto
 
-yMIoAnicrVJbSBRRGN41KzS6EEiREDVFhpnNzJk55+xCiRIRdIHooaRkO7dZB92d
-bWc0LxQWkT5U0g260oWIinqIrlaGmmRUxHYzNboSFFlRWlQQ2Bkp6KHHzsvh/P/3
-fef7P/72kUMCmcG960vd1eNW3gzebt1ZEVg2OWtqrUIdXq2Ea5UyMXiJci5cL1Jm
-cyWsqJqqGRZBmCPIGFeFATjTgGrphKuca9ikglHKQ9gCEkKACFkC6ZAQjADEXAeA
-q0TJUyw7HhXJRNKOe1IWqZBySKFu6IiETE6wDi2VGkDHFuWAA0QMkxlIEksd12dI
-c5S4It92ZE0+IoP2/oH/z74rBuUQQxRSE3EKMFYtJq1qJmIhqGuqqmkhH+iKZJzE
-hETbNTXVyto8RVYqbSb8UP0p/upGnZioyWdOTBITScdzmFMuW6Wel3DDPtWrTvjY
-NYJGfqtEqB3nMkTJqBRJ13biSliTSObZvqxmQA1hE4f0PEVUJeykiNg+wkQQq/L4
-/4hKKcmhRQGkjOkQhaDBMbUY4QQwE1vCIhAYJlINYeomFsjCkGrIMLglABaqjAkq
-/lyr444SNqVNEpWSrh2NE68iKZS1bS0r0wPBzMCwoWn+cgUyM8b8WbmGyuEDi28/
-fPmsY8X86uMfb7AJi0ZsLzzeWmI9ntI4EDxw91Zf+88q+vJG8MikM4cyUs+3dzfn
-jJ0Hpne3LZ6X864jdbiuOPRgdFUT2nB/5pwXD8/uK/EyzIEluR1vLnzesuDVg87m
-3sKsYxtfpFqCqR8l29LX9R/dU3HpTs+zOdG3O1IFahPuKype9vVAzbbwZawv9XbX
-d23O2dR45VTBROdWc+J0em9RWu7cq6sOPrn+6Vr92N6u7Cufl5z8srC9HzfcbTH3
-7T+xZ/w0dddssnyycjV++GJg+ixnFBgyIyMGsjpiTX11Pec7159Icz9lfz/y+um9
-D/ez8841NX77kf9o7666rdbGTe/X/QJDpEpG
-=ihSz
+yMJoAnicrZJfbBRFHMev4p9wSoIPpA/2wYy2BjzrzM7szM4pDTSxJqaCEpTEUq7z
+b++WK7d3u9uTFmoCCTWGRB6MiUC0yEsVjZKGBAjQVEr5UyH8jYklRKAQAyEx4UUf
+mupso4kPProvuzvz/X1/n9935tSiBZlsw55tpbjWuP5sw48/3O/LrPuU39sCZKj7
+QX4LKJv5l+nVJk4K5UCDPIAIIuIL5mlGldLQEKwVwtB3hIZaI8+VRkmpuedjKxHY
+cN8whwrhMUw97WCsoQA54AeVoomqUVBJrC2DVGoqqUMcJrirhedQH0qCHc+XGmvM
+BHEVYbawFMZphYWTIjatQWjX7E9hHu8/9P8zd9+8HVNMUukyLbHnQV9ZVOQyxamD
+IESIp8LYRBWxyVh1MDDQDwZzIDL1sGzSTOOgaIFjkO8CgiNOOUeGWg+pNKK+0JwQ
+IhnBdggfWmjhYAntl0CKM+ErRRlhjodcV0EfdFtv260eqHnzNKF/dW4tFi1ONQqT
+UIW9drGUJNU4nwIl/dVU9b6Rhb/rCzKoaHs0tqJuojgIKyCPrFIlQWqICOWYM+Kh
+HDCbq0FkCkGqcBn1oH3SPqZuLRUnBkPJbEaup32iCTeQC6E94RCJiGNsqpBQaJDd
+FD5UysVScMqQ8uxcIJ2oVglBnltMUbSWNrOKSPoiAwZPjq9/NNOQzTz+2CPplc1k
+Fy7+5yK3fPzEXP7JjncmXnz1pR53dnGuNLdh5nIy/sf2XZ/g2TdvT711caA7aL+1
+7739dP/o6u+LK1fztj9rtcFFG24uPX8AZA4+uNvxNvlt+eW2ZV2d28srPv/55ZnC
+5FRt1dHeK9PjHwaje4ZAv3qw8ci9JaMj7Z3NwxdPlqpR/ouJh0OfXXjq6+FXxsaX
+n6g0P7P70Mqup0tozdaPrp1rvvRu40897Xu/a8rmbt+5MZ1LujuzrerZjVcPt7U8
+nHpt8tvfmxo/eD5pGmno5mPTHeXjJ3a8cH82s3NoZHLu9I43jg+v+ubM0uJCvz5z
+/dfSrrGm+ujBNfu+/Opm34XN8Fjtl+eyLWv58N6J19du23nsXM9fGUFa0g==
+=pl3V
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
