@@ -4,8 +4,18 @@ title: Home
 ---
 
 <h1>Yo, I'm Izzy.</h1>
-<p>I'm a fourth year computer science student at MIT. I like to write code, stay active, and learn new things. This website is the intersection of these facts and then some.</p>
-<p>Don't be shy, say hi <span class="fa fa-hand-peace-o fa-lg"></span>
+<p>I'm a fourth year computer science student at MIT. I like to write code, stay active, and learn new things. Currently I'm doing these by being an undergraduate researcher at the <a href="https://nlp.csail.mit.edu">NLP group in CSAIL</a>, by weightlifting and starting to rockclimb, and by learning Chinese.</p>
+
+<h3>Blog</h3>
+<p>> me_irl</p>
+<ul class="fa-ul">
+	{% for post in site.posts %}
+	<li>{{ post.date | date_to_string }} &middot; <a href="{{post.url}}">{{ post.title }}</a> </li>
+	{% endfor %}
+</ul>
+
+<h3>Connect with me</h3>
+<p>Don't be shy, say hi <span class="fa fa-hand-peace-o fa-lg"></span></p>
 <ul class="fa-ul">
 	<li><a href="mailto:izzyg@mit.edu" target="_blank"><i class="fa-li fa fa-envelope"></i>izzyg@mit.edu</a></li>
 	<li><a href="https://github.com/izzygomez" target="_blank"><i class="fa-li fa fa-github-alt"></i>github/izzygomez</a></li>
