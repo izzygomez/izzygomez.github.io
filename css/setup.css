@@ -102,7 +102,6 @@ a:visited {
     padding-top: 20px;
     position: absolute;
     width: calc(100% - 40px);
-    z-index: -1;
 }
 @media (min-width: 400px) {
     .scheme-palette {
