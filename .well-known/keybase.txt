@@ -1,0 +1,80 @@
+==================================================================
+https://keybase.io/izzy
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://izzygomez.com
+    * I am izzy (https://keybase.io/izzy) on keybase.
+      * I have a public key with fingerprint 706B D6B6 2427 A95D A826  F0B4 328F BD3D 37A4 5C47
+
+To do so, I am signing this object:
+
+{
+    "body": {
+            "key": {
+                        "eldest_kid": "01014fa78d76ccd0e43dc130f2ad0dd185becbbd98f3d76a3e9fe726aa87368d233d0a",
+                                    "fingerprint": "706bd6b62427a95da826f0b4328fbd3d37a45c47",
+                                                "host": "keybase.io",
+                                                            "key_id": "328fbd3d37a45c47",
+                                                                        "kid": "01014fa78d76ccd0e43dc130f2ad0dd185becbbd98f3d76a3e9fe726aa87368d233d0a",
+                                                                                    "uid": "7c7b6b57db3880fc0b4157c962100119",
+                                                                                                "username": "izzy"
+
+},
+        "revoke": {
+                    "sig_ids": [
+                                    "da4e3637096216ec5390ea2d87ed9c68cbc5e55ba3d446f0d1314d3cb2fc1e490f"
+
+]
+
+},
+        "service": {
+                    "hostname": "izzygomez.com",
+                                "protocol": "https:"
+
+},
+        "type": "web_service_binding",
+                "version": 1
+
+},
+    "ctime": 1499027298,
+        "expire_in": 157680000,
+            "prev": "0893636f7607c30d7da7bcf099def2220437cfd900dfe9cb96223c3cd025f1e3",
+                "seqno": 22,
+                    "tag": "signature"
+
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.72
+Comment: https://keybase.io/crypto
+
+yMJqAnicrVJbaBVHGD6pN0xaWhErgr4MFaIEnZ3Z3dndRmpoTYPlUIxKziFHj3P5
+52SNOXuye3JqYkPx0paGCNIb4ktoDW1fCsagCBIvtUJazYOg2D4UfEhEtA9alFYq
+6mxQ8KGPnZdhZr7v+7//++fnV+Zk6uuO7O1KepcWJusunb/Xl8nnO8QeJCLVj4I9
+qBtmN9ilIKkWu0OFAoQtbNmaM08xV0qFwaZKWhRrwhVWyvIcAVII5XuaGgin4Gtg
+xOXcY9T1FKFUYY6akA7LJYgrcViuGlmGXaFc4RKbMO47invE1VjYlHhaKKoo47Yj
+bWaIXVGSMow5wRNYE0bmzhyKs/b+A/8/++6blWOSCVc4TAnqeVhLY9VymPRdYmFs
+WX4KTCAu8x4w6HBgoB8NNqEYalE3pJkmYckYTlDQiRS3gbqU4ZTsgnSoj4ET5TFQ
+vnQ9KaQDjiM4VbZtQlEWtWxFpSBaWmD7WKNtRttUq4VyVjxN6IXKpagHBtbIqMeY
+qsRRNZLRLvPUVa1WkiC1Ve2vpNgPQBSfqRRFWFZmQIZRgzgJozIKLIOU1TCVtWzf
+x4QR32tCsLsSxlAMU4TDXA+bldaBWpq655vWXM1czCTFiinOhNTY9xVoQgi2KZNa
++RgrDb4UJgJCJTXzIY62gKK0r95yhAJCjE9eMpomujKv9sWABn86V5ibqavPzJ/3
+UvpzM/ULX3v+nz9ct+CxdZLvbPgazl++tql9ZW79IXfHxHTu2+wCb/DjRRdaT6+d
+OHWs8+GjJfljb2wbc3JPZn4fEX99/urwWON3jfDDFz9ueXPwYfz+8fzBiXxH61D3
+qv0cRhpmVrfX3jl3JZj8e/qr0RZvmLeRA6tqVypzNgy/fXp1tkG1TX3fVmjP3T27
+99QNGNo8825z1Hxh4T8brx/5JRss06N/fHPz9q25L7cs7u0a+3f/VufXR8vmzb/7
+UTg+WTf1ycXRFbsPdpwY3Xroz6uvjx1+cAJvn7Aam8MdrS0j98YLnVPL+78ceu9m
+9naw5eiB5rey9x312Yo77WdaNhTW3TiJcqXpfWvHMxvpb4/XZy9++hQdf1jd
+=zndK
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/izzy
+
+==================================================================
