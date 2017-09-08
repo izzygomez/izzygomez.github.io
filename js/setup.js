@@ -1,4 +1,4 @@
-// Start up particles in background
+//// Start up particles in background
 particlesJS("particles-js", {
   "particles": {
     "number": {
@@ -110,38 +110,88 @@ particlesJS("particles-js", {
   "retina_detect": true
 });
 
-// Click handlers for scheme palette
+// HELPER FUNCTIONS
+function setColor(c) {
+  console.log("setting color..."); // DEBUGGING
+  var text_c = "#000"; var bg_c = "#fff"; var header_c = "#aaa"; // init vals
+  if (c === "light") {
+    // set text+links to black, background to white, & headers to light grey
+    text_c = "#000"; bg_c = "#fff"; header_c = "#aaa";
+  } else if (c == "dark") {
+    // set text+links to white, background to dark grey, & headers to light grey
+    text_c = "#fff"; bg_c = "#222222"; header_c = "#aaa";
+  } else if (c == "sepia") {
+    // set text+links to dark maroon, background to beige, & headers to
+    // light orange
+    text_c = "#42210b"; bg_c = "#fff4dd"; header_c = "#ecac80";
+  }
+  // Make changes to CSS
+  $("body").css("color", text_c);
+  $("a,a\\:visited").css("color", text_c);
+  $("body").css("background", bg_c);
+  $(".section h3, .section:last-child").css("color", header_c);
+}
+function setCookie(c) {
+  console.log("setting cookie..."); // DEBUGGING
+  // Specify expiration of cookie
+  var DAYS = 365; // default 1 year expiration
+  var date = new Date();
+  date.setTime(date.getTime() + (DAYS*24*60*60*1000));
+  var expires = "; expires=" + date.toUTCString();
+  // finally create cookie
+  document.cookie = "background-color=" + c + expires + "; path=/";
+}
+
+//// Check if a cookie with color settings exist
+var bg_color = document.cookie.replace(
+    /(?:(?:^|.*;\s*)background-color\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+if (bg_color) {
+  // If so, then use those settings to set class=selected to selected color
+  console.log("using existing cookie for color"); // DEBUGGING
+  $('.scheme-palette>div[data-palette="'+bg_color+'"]').addClass('selected');
+} else {
+  // ...else default to dark...
+  console.log("no cookie, creating one for color"); // DEBUGGING
+  var DEFAULT = "dark";
+  $('.scheme-palette>div[data-palette="'+DEFAULT+'"]').addClass('selected');
+  // ...and init cookie
+  setCookie(DEFAULT);
+}
+
+//// Set CSS depending on selected color
+var color = $(".scheme-palette>div.selected").attr('data-palette');
+setColor(color);
+
+// Set click handlers for scheme palette
+// TODO I think I can remove this wrapping (function () {...})() call
 (function () {
-  $(document).on('click', '.scheme-palette>div[data-palette="light"]', function() {
-    $(".scheme-palette>div.selected").removeClass('selected');
-    $(this).addClass('selected');
+  $(document).on('click', '.scheme-palette>div[data-palette="light"]',
+    function() {
+      $(".scheme-palette>div.selected").removeClass('selected');
+      $(this).addClass('selected');
 
-    // Make changes to CSS
-    $("body").css("color", "#000"); // text black
-    $("a,a\\:visited").css("color", "#000"); // also links black
-    $("body").css("background", "#fff"); // background white
-    $(".section h3, .section:last-child").css("color", "#aaa"); // h3/last-child to light grey
-  });
+      setColor("light");
+      setCookie("light");
+    }
+  );
 
-  $(document).on('click', '.scheme-palette>div[data-palette="dark"]', function() {
-    $(".scheme-palette>div.selected").removeClass('selected');
-    $(this).addClass('selected');
+  $(document).on('click', '.scheme-palette>div[data-palette="dark"]',
+    function() {
+      $(".scheme-palette>div.selected").removeClass('selected');
+      $(this).addClass('selected');
 
-    // Make changes to CSS
-    $("body").css("color", "#fff"); // text white
-    $("a,a\\:visited").css("color", "#fff"); // also links white
-    $("body").css("background", "#222222"); // background dark grey
-    $(".section h3, .section:last-child").css("color", "#aaa"); // h3/last-child to light grey
-  });
+      setColor("dark");
+      setCookie("dark");
+    }
+  );
 
-  $(document).on('click', '.scheme-palette>div[data-palette="sepia"]', function() {
-    $(".scheme-palette>div.selected").removeClass('selected');
-    $(this).addClass('selected');
+  $(document).on('click', '.scheme-palette>div[data-palette="sepia"]',
+    function() {
+      $(".scheme-palette>div.selected").removeClass('selected');
+      $(this).addClass('selected');
 
-    // Make changes to CSS
-    $("body").css("color", "#42210b"); // text dark maroon
-    $("a,a\\:visited").css("color", "#42210b"); // also links dark maroon
-    $("body").css("background", "#fff4dd"); // background to beige
-    $(".section h3, .section:last-child").css("color", "#ecac80"); // h3/last-child to light orange
-  });
+      setColor("sepia");
+      setCookie("sepia");
+    }
+  );
 })();
