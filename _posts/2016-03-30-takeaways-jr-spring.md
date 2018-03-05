@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Some Takeaways from Junior Spring
-permalink: blog/takeaways-jr-spring
+permalink: blog/takeaways
 ---
 Junior spring just ended. Here's a couple takeaways from the semester.
 
