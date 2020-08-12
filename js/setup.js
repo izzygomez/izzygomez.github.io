@@ -143,31 +143,38 @@ function setCookie(c) {
   document.cookie = "background-color=" + c + expires + "; path=/";
 }
 
-var BR = "br";
-var COLLAPSE_SELECTOR = ".collapse-arrow";
-var DOT = ".";
+var HASH = "#";
+var ITEM_FADE = "item-fade";
 var ITEM_HIDE = "item-hide";
-var LI_CONTENT_SELECTOR = ".li-content";
-var LI_ELLIPSIS_SELECTOR = " .li-ellipsis";
+var ITEMS_LINKS_NOT_CLICKABLE = "items-links-not-clickable";
+var SELECTOR_LI_COLLAPSE = ".li-collapse";
+var SELECTOR_LI_CONTENT = ".li-content";
+var SELECTOR_LI_EXPAND = ".li-expand";
 var SPACE = " ";
-var TEXT_FADE = "text-fade";
-function toggleFadeAndExpansion(obj) {
-  var listItemClassName= $(obj).attr('class');
-  var liContent = document.querySelector(DOT + listItemClassName + SPACE + LI_CONTENT_SELECTOR);
-  if (liContent) {
-    var liEllipsis = document.querySelector(DOT + listItemClassName + SPACE + LI_ELLIPSIS_SELECTOR);
-    var collapseArrow = document.querySelector(DOT + listItemClassName + SPACE + COLLAPSE_SELECTOR);
+function expandAndRemoveFade(listItemId) {
+  var liContent = document.querySelector(HASH + listItemId + SPACE + SELECTOR_LI_CONTENT);
+  var liEllipsis = document.querySelector(HASH + listItemId + SPACE + SELECTOR_LI_EXPAND);
+  var collapseArrow = document.querySelector(HASH + listItemId + SPACE + SELECTOR_LI_COLLAPSE);
 
-    var hasTextFade = liContent.classList.contains(TEXT_FADE);
-    if (hasTextFade) {
-      liContent.classList.remove(TEXT_FADE);
-      liEllipsis.classList.add(ITEM_HIDE);
-      collapseArrow.classList.remove(ITEM_HIDE);
-    } else {
-      liContent.classList.add(TEXT_FADE);
-      liEllipsis.classList.remove(ITEM_HIDE);
-      collapseArrow.classList.add(ITEM_HIDE);
-    }
+  var inFadedMode = liContent.classList.contains(ITEM_FADE);
+  if (inFadedMode) {
+    liContent.classList.remove(ITEM_FADE);
+    liContent.classList.remove(ITEMS_LINKS_NOT_CLICKABLE);
+    liEllipsis.classList.add(ITEM_HIDE);
+    collapseArrow.classList.remove(ITEM_HIDE);
+  }
+}
+function collapseAndAddFade(listItemId) {
+  var liContent = document.querySelector(HASH + listItemId + SPACE + SELECTOR_LI_CONTENT);
+  var liEllipsis = document.querySelector(HASH + listItemId + SPACE + SELECTOR_LI_EXPAND);
+  var collapseArrow = document.querySelector(HASH + listItemId + SPACE + SELECTOR_LI_COLLAPSE);
+
+  var inFadedMode = liContent.classList.contains(ITEM_FADE);
+  if (!inFadedMode) {
+    liContent.classList.add(ITEM_FADE);
+    liContent.classList.add(ITEMS_LINKS_NOT_CLICKABLE);
+    liEllipsis.classList.remove(ITEM_HIDE);
+    collapseArrow.classList.add(ITEM_HIDE);
   }
 }
 
