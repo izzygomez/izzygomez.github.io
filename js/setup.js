@@ -131,6 +131,7 @@ function setColor(c) {
   $("body").css("background", bg_c);
   $(".section h3, .section:last-child").css("color", header_c);
 }
+
 function setCookie(c) {
   console.log("setting cookie..."); // DEBUGGING
   // Specify expiration of cookie
@@ -140,6 +141,34 @@ function setCookie(c) {
   var expires = "; expires=" + date.toUTCString();
   // finally create cookie
   document.cookie = "background-color=" + c + expires + "; path=/";
+}
+
+var BR = "br";
+var COLLAPSE_SELECTOR = ".collapse-arrow";
+var DOT = ".";
+var ITEM_HIDE = "item-hide";
+var LI_CONTENT_SELECTOR = ".li-content";
+var LI_ELLIPSIS_SELECTOR = " .li-ellipsis";
+var SPACE = " ";
+var TEXT_FADE = "text-fade";
+function toggleFadeAndExpansion(obj) {
+  var listItemClassName= $(obj).attr('class');
+  var liContent = document.querySelector(DOT + listItemClassName + SPACE + LI_CONTENT_SELECTOR);
+  if (liContent) {
+    var liEllipsis = document.querySelector(DOT + listItemClassName + SPACE + LI_ELLIPSIS_SELECTOR);
+    var collapseArrow = document.querySelector(DOT + listItemClassName + SPACE + COLLAPSE_SELECTOR);
+
+    var hasTextFade = liContent.classList.contains(TEXT_FADE);
+    if (hasTextFade) {
+      liContent.classList.remove(TEXT_FADE);
+      liEllipsis.classList.add(ITEM_HIDE);
+      collapseArrow.classList.remove(ITEM_HIDE);
+    } else {
+      liContent.classList.add(TEXT_FADE);
+      liEllipsis.classList.remove(ITEM_HIDE);
+      collapseArrow.classList.add(ITEM_HIDE);
+    }
+  }
 }
 
 //// Check if a cookie with color settings exist

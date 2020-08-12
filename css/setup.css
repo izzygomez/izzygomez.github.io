@@ -36,23 +36,54 @@ a:visited {
 	margin: auto
 }
 
+/** Expandable list items CSS **/
+:root {
+  --opaque: rgba(0,0,0,1);
+  --transparent: rgba(0,0,0,0);
+}
+.collapse-arrow {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.item-hide {
+  display: none;
+}
+.li-ellipsis {
+  vertical-align: top;
+}
+.text-fade {
+   display: inline-block;
+   max-width: 95%;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: clip;
+   -webkit-mask-image: linear-gradient(to right, var(--opaque) 35%, var(--transparent) 100%);
+}
+
 /** footer CSS **/
 .footer {
   text-align: center;
-  padding: 20px 0;
+  padding: 10px 0 10px 0;
   color: #aaa;
   font-size: 14px;
-  line-height: 150%
+  line-height: 150%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.footer-icons {
+  padding: 20px 0 0 0;
+  border-top: 1px solid #ccc;
 }
 .footer i {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 13px;
+  padding-right: 13px;
 }
 
 /** section CSS **/
 .section {
     padding: 80px 0 20px;
-    border-bottom: 1px solid #ccc;
     font-size: 14px;
     line-height: 150%
 }
@@ -70,21 +101,21 @@ a:visited {
     margin: 0 0 10px;
     font-weight: 300;
 }
-.section p,
 .section ul {
-    margin-bottom: 16px
-}
-.section p {
-    text-align: justify
-}
-.section p:last-child {
-    margin-bottom: 0
-}
-.section ul {
-    list-style: none
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 0;
+  list-style: none;
 }
 .section li {
     margin: 0
+}
+.section p {
+    text-align: justify;
+    margin-bottom: 16px;
+}
+.section p:last-child {
+    margin-bottom: 0
 }
 .section .right-side {
     margin-top: 30px;
@@ -107,11 +138,6 @@ a:visited {
     margin-top: 4px;
     margin-bottom: -4px;
     margin-right: 3px
-}
-.section:last-child {
-    padding: 20px 0;
-    color: #aaa;
-    border: none
 }
 
 /** Scheme palette CSS **/
