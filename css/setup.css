@@ -6,12 +6,14 @@ body {
     background: #222222;
     color: #fff
 }
+
 /** Making sure that links stay same black (regardless if visited) **/
 a,
 a:visited {
     text-decoration: underline;
     color: #fff
 }
+
 /** Positioning for particles-js container **/
 #particles-js {
   position: fixed;
@@ -22,6 +24,7 @@ a:visited {
   width: 100%;
   height: 100%
 }
+
 /** Positioning for main content container **/
 .container {
 	max-width: 600px;
@@ -32,8 +35,23 @@ a:visited {
 	right: 0;
 	margin: auto
 }
+
+/** footer CSS **/
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #aaa;
+  font-size: 14px;
+  line-height: 150%
+}
+.footer i {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/** section CSS **/
 .section {
-    padding: 80px 0;
+    padding: 80px 0 20px;
     border-bottom: 1px solid #ccc;
     font-size: 14px;
     line-height: 150%
