@@ -57,7 +57,7 @@ a:visited {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: clip;
-  -webkit-mask-image: linear-gradient(to right, var(--opaque) 35%, var(--transparent) 100%);
+  -webkit-mask-image: linear-gradient(to right, var(--opaque) 50%, var(--transparent) 100%);
 }
 .item-hide {
   display: none;
