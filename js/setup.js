@@ -112,7 +112,7 @@ particlesJS("particles-js", {
 
 // HELPER FUNCTIONS
 function setColor(c, smooth_transition = true) {
-  var text_c = "#000"; var bg_c = "#fff"; var header_c = "#aaa"; // init vals
+  var text_c = "#000"; var bg_c = "#fff"; var header_c = "#aaa";
   if (c === "light") {
     // set text+links to black, background to white, & headers to light grey
     text_c = "#000"; bg_c = "#fff"; header_c = "#aaa";
@@ -124,15 +124,22 @@ function setColor(c, smooth_transition = true) {
     // light orange
     text_c = "#42210b"; bg_c = "#fff4dd"; header_c = "#ecac80";
   }
+
   // Make changes to CSS
   if (smooth_transition) {
-    $("body").css("transition", "color,background 2s");
-    $("a,a\\:visited").css("transition", "color 2s");
-    $(".section h3, .section:last-child").css("transition", "color 2s");
+    $("body").css("transition-property", "color, background");
+    $("body").css("transition-duration", "1.5s");
+    $("body").css("transition-timing-function", "ease-in-out");
+
+    $("a,a\\:visited").css("transition", "color 1.5s ease-in-out");
+
+    $(".section h3, .section:last-child").css("transition", "color 1.5s ease-in-out");
   }
   $("body").css("color", text_c);
   $("body").css("background", bg_c);
+
   $("a,a\\:visited").css("color", text_c);
+
   $(".section h3, .section:last-child").css("color", header_c);
 
 }
