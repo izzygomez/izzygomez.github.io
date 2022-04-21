@@ -111,8 +111,7 @@ particlesJS("particles-js", {
 });
 
 // HELPER FUNCTIONS
-function setColor(c) {
-  console.log("setting color..."); // DEBUGGING
+function setColor(c, smooth_transition = true) {
   var text_c = "#000"; var bg_c = "#fff"; var header_c = "#aaa"; // init vals
   if (c === "light") {
     // set text+links to black, background to white, & headers to light grey
@@ -126,14 +125,19 @@ function setColor(c) {
     text_c = "#42210b"; bg_c = "#fff4dd"; header_c = "#ecac80";
   }
   // Make changes to CSS
+  if (smooth_transition) {
+    $("body").css("transition", "color,background 2s");
+    $("a,a\\:visited").css("transition", "color 2s");
+    $(".section h3, .section:last-child").css("transition", "color 2s");
+  }
   $("body").css("color", text_c);
-  $("a,a\\:visited").css("color", text_c);
   $("body").css("background", bg_c);
+  $("a,a\\:visited").css("color", text_c);
   $(".section h3, .section:last-child").css("color", header_c);
+
 }
 
 function setCookie(c) {
-  console.log("setting cookie..."); // DEBUGGING
   // Specify expiration of cookie
   var DAYS = 365; // default 1 year expiration
   var date = new Date();
@@ -183,11 +187,9 @@ var bg_color = document.cookie.replace(
     /(?:(?:^|.*;\s*)background-color\s*\=\s*([^;]*).*$)|^.*$/, "$1");
 if (bg_color) {
   // If so, then use those settings to set class=selected to selected color
-  console.log("using existing cookie for color"); // DEBUGGING
   $('.scheme-palette>div[data-palette="'+bg_color+'"]').addClass('selected');
 } else {
   // ...else default to dark...
-  console.log("no cookie, creating one for color"); // DEBUGGING
   var DEFAULT = "dark";
   $('.scheme-palette>div[data-palette="'+DEFAULT+'"]').addClass('selected');
   // ...and init cookie
@@ -196,7 +198,7 @@ if (bg_color) {
 
 //// Set CSS depending on selected color
 var color = $(".scheme-palette>div.selected").attr('data-palette');
-setColor(color);
+setColor(color, /*smooth_transition=*/false);
 
 // Set click handlers for scheme palette
 // TODO I think I can remove this wrapping (function () {...})() call
