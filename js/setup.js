@@ -1,4 +1,4 @@
-//// Start up particles in background
+// Start up particles in background
 particlesJS("particles-js", {
   "particles": {
     "number": {
@@ -189,7 +189,7 @@ function collapseAndAddFade(listItemId) {
   }
 }
 
-//// Check if a cookie with color settings exist
+// Check if a cookie with color settings exist
 var bg_color = document.cookie.replace(
     /(?:(?:^|.*;\s*)background-color\s*\=\s*([^;]*).*$)|^.*$/, "$1");
 if (bg_color) {
@@ -203,40 +203,35 @@ if (bg_color) {
   setCookie(DEFAULT);
 }
 
-//// Set CSS depending on selected color
+// Set CSS depending on selected color
 var color = $(".scheme-palette>div.selected").attr('data-palette');
 setColor(color, /*smooth_transition=*/false);
 
 // Set click handlers for scheme palette
-// TODO I think I can remove this wrapping (function () {...})() call
-(function () {
-  $(document).on('click', '.scheme-palette>div[data-palette="light"]',
-    function() {
-      $(".scheme-palette>div.selected").removeClass('selected');
-      $(this).addClass('selected');
+$(document).on('click', '.scheme-palette>div[data-palette="light"]',
+  function() {
+    $(".scheme-palette>div.selected").removeClass('selected');
+    $(this).addClass('selected');
 
-      setColor("light");
-      setCookie("light");
-    }
-  );
+    setColor("light");
+    setCookie("light");
+  }
+);
+$(document).on('click', '.scheme-palette>div[data-palette="dark"]',
+  function() {
+    $(".scheme-palette>div.selected").removeClass('selected');
+    $(this).addClass('selected');
 
-  $(document).on('click', '.scheme-palette>div[data-palette="dark"]',
-    function() {
-      $(".scheme-palette>div.selected").removeClass('selected');
-      $(this).addClass('selected');
+    setColor("dark");
+    setCookie("dark");
+  }
+);
+$(document).on('click', '.scheme-palette>div[data-palette="sepia"]',
+  function() {
+    $(".scheme-palette>div.selected").removeClass('selected');
+    $(this).addClass('selected');
 
-      setColor("dark");
-      setCookie("dark");
-    }
-  );
-
-  $(document).on('click', '.scheme-palette>div[data-palette="sepia"]',
-    function() {
-      $(".scheme-palette>div.selected").removeClass('selected');
-      $(this).addClass('selected');
-
-      setColor("sepia");
-      setCookie("sepia");
-    }
-  );
-})();
+    setColor("sepia");
+    setCookie("sepia");
+  }
+);
