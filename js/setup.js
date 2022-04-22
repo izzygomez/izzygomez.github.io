@@ -194,41 +194,41 @@ var bg_color = document.cookie.replace(
     /(?:(?:^|.*;\s*)background-color\s*\=\s*([^;]*).*$)|^.*$/, "$1");
 if (bg_color) {
   // If so, then use those settings to set class=selected to selected color
-  $('.scheme-palette>div[data-palette="'+bg_color+'"]').addClass('selected');
+  $('.color-option[data-palette="'+bg_color+'"]').addClass('selected');
 } else {
   // ...else default to dark...
   var DEFAULT = "dark";
-  $('.scheme-palette>div[data-palette="'+DEFAULT+'"]').addClass('selected');
+  $('.color-option[data-palette="'+DEFAULT+'"]').addClass('selected');
   // ...and init cookie
   setCookie(DEFAULT);
 }
 
 // Set CSS depending on selected color
-var color = $(".scheme-palette>div.selected").attr('data-palette');
+var color = $(".color-option.selected").attr('data-palette');
 setColor(color, /*smooth_transition=*/false);
 
-// Set click handlers for scheme palette
-$(document).on('click', '.scheme-palette>div[data-palette="light"]',
+// Set click handlers for color palette
+$(document).on('click', '.color-option[data-palette="light"]',
   function() {
-    $(".scheme-palette>div.selected").removeClass('selected');
+    $(".color-option.selected").removeClass('selected');
     $(this).addClass('selected');
 
     setColor("light");
     setCookie("light");
   }
 );
-$(document).on('click', '.scheme-palette>div[data-palette="dark"]',
+$(document).on('click', '.color-option[data-palette="dark"]',
   function() {
-    $(".scheme-palette>div.selected").removeClass('selected');
+    $(".color-option.selected").removeClass('selected');
     $(this).addClass('selected');
 
     setColor("dark");
     setCookie("dark");
   }
 );
-$(document).on('click', '.scheme-palette>div[data-palette="sepia"]',
+$(document).on('click', '.color-option[data-palette="sepia"]',
   function() {
-    $(".scheme-palette>div.selected").removeClass('selected');
+    $(".color-option.selected").removeClass('selected');
     $(this).addClass('selected');
 
     setColor("sepia");
