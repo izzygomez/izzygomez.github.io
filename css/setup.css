@@ -121,16 +121,16 @@ a:visited {
     justify-content: center;
 }
 .color-option {
-    width: 16px;
-    height: 16px;
-    margin: 0 5px 0 5px;
+    width: 18px;
+    height: 18px;
+    margin: 0 9px 0 9px;
     cursor: pointer;
     border-style: solid;
     border-width: 0;
 }
 .color-option.selected {
-	width: 14px;
-	height: 14px;
+	width: 16px;
+	height: 16px;
 	border-width: 1px;
 }
 .color-option[data-palette="light"] {
