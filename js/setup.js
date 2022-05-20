@@ -196,8 +196,8 @@ if (bg_color) {
   // If so, then use those settings to set class=selected to selected color
   $('.color-option[data-palette="'+bg_color+'"]').addClass('selected');
 } else {
-  // ...else default to dark...
-  var DEFAULT = "dark";
+  // ...else default to 'sepia'...
+  var DEFAULT = "sepia";
   $('.color-option[data-palette="'+DEFAULT+'"]').addClass('selected');
   // ...and init cookie
   setCookie(DEFAULT);
