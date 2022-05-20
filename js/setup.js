@@ -146,7 +146,7 @@ function setColor(c, smooth_transition = true) {
 
 function setCookie(c) {
   // Specify expiration of cookie
-  var DAYS = 365; // default 1 year expiration
+  var DAYS = 7; // default 1 week expiration
   var date = new Date();
   date.setTime(date.getTime() + (DAYS*24*60*60*1000));
   var expires = "; expires=" + date.toUTCString();
