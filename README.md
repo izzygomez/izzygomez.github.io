@@ -10,3 +10,6 @@ TODOs
 * Include pics (of me?) / maybe feed from socials?
 * Create `bookshelf/` (a la https://patrickcollison.com/bookshelf).
 * Add some explanation of directory layout here in README.
+
+Notes
+* Ideally would like to update `master` branch name to `main`, but `git.io/izzy` redirects specifically to `master` & [can't be edited anymore](https://github.blog/changelog/2022-04-25-git-io-deprecation/), & I like aesthetic links in footer.
