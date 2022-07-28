@@ -1,10 +1,4 @@
-# Setup
-title:               IG
-tagline:             Izzy Gomez
+# Config (https://jekyllrb.com/docs/step-by-step/09-collections/#configuration)
+title:               Izzy Gomez
 url:                 https://izzygomez.com
-
-# About/contact
-author:
-  name:              Izzy Gomez
-  url:               https://izzygomez.com
-  email:             izzygmit@gmail.com
+email:               izzy@izzygomez.com
