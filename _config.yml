@@ -2,3 +2,5 @@
 title:               Izzy Gomez
 url:                 https://izzygomez.com
 email:               izzy@izzygomez.com
+
+exclude: ['*README.md']
