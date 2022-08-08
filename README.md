@@ -2,6 +2,11 @@
 
 Always a work in progress™️
 
+## Development
+
+1. Clone the repo: `git clone https://github.com/izzygomez/izzygomez.github.io`
+1. Initialize & download submodules: `git submodule update --init --recursive`
+
 ## TODOs
 * Update `resume/` with more up-to-date info
   * consider changing style to `\moderncvstyle{classic}` in latex file.
