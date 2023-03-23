@@ -4,8 +4,11 @@ Always a work in progress™️
 
 ## Development
 
+Built with [Jekyll](https://jekyllrb.com/) & [Github Pages](https://pages.github.com/).
+
 1. Clone the repo: `git clone https://github.com/izzygomez/izzygomez.github.io`
 1. Initialize & download submodules: `git submodule update --init --recursive`
+1. Run local server & view at `localhost:4000`: `jekyll s`
 
 ## TODOs
 * Update `resume/` with more up-to-date info
