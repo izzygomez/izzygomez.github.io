@@ -11,6 +11,8 @@ Built with [Jekyll](https://jekyllrb.com/) & [Github Pages](https://pages.github
 1. Run local server & view at `localhost:4000`: `jekyll s`
 
 ## TODOs
+* Consider adding PGP key (used on Keybase + Github commit verification) to footer of website.
+  * e.g. verified way of sending me encrypted message
 * Update `resume/` with more up-to-date info
   * consider changing style to `\moderncvstyle{classic}` in latex file.
   * consider having a `projects/` page that has resume contents in page form
