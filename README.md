@@ -13,6 +13,9 @@ Built with [Jekyll](https://jekyllrb.com/) & [Github Pages](https://pages.github
 ## TODOs
 * Consider adding PGP key (used on Keybase + Github commit verification) to footer of website.
   * e.g. verified way of sending me encrypted message
+* Add "quotes" section to footer
+  * see `_data/quotes.yml` & [docs](https://jekyllrb.com/docs/datafiles/) here
+  * consider adding quotes from old Wordpress site
 * Update `resume/` with more up-to-date info
   * consider changing style to `\moderncvstyle{classic}` in latex file.
   * consider having a `projects/` page that has resume contents in page form
