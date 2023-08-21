@@ -235,3 +235,9 @@ $(document).on('click', '.color-option[data-palette="sepia"]',
     setCookie("sepia");
   }
 );
+
+// Email obfuscation
+// see: https://css-tricks.com/how-to-safely-share-your-email-address-on-a-website/
+var encodedEmail = "aXp6eUBpenp5Z29tZXouY29t" // should be {{ site.email }}
+const emailElement = document.getElementById("email")
+emailElement.setAttribute("href", "mailto:".concat(atob(encodedEmail)))
