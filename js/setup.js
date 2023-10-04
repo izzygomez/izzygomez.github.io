@@ -197,7 +197,7 @@ if (bg_color) {
   $('.color-option[data-palette="'+bg_color+'"]').addClass('selected');
 } else {
   // ...else default to 'sepia'...
-  var DEFAULT = "sepia";
+  var DEFAULT = "dark";
   $('.color-option[data-palette="'+DEFAULT+'"]').addClass('selected');
   // ...and init cookie
   setCookie(DEFAULT);
