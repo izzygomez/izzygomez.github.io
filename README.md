@@ -10,6 +10,16 @@ Built with [Jekyll](https://jekyllrb.com/) & [Github Pages](https://pages.github
 1. Initialize & download submodules: `git submodule update --init --recursive`
 1. Run local server & view at `localhost:4000`: `jekyll s`
 
+## HTML Formatting
+
+HTML files in this directory should be formatted using [`tidy`](https://formulae.brew.sh/formula/tidy-html5) with the following command:
+
+```shell
+tidy -m file.html
+```
+
+The `-m` flag modifies the file in place. This assumes a [`.tidyrc` file](https://github.com/izzygomez/dotfiles/blob/1ac6e1426a996bb4448339cab54121295ff3deb9/tidyrc) exists; otherwise, add `-i -wrap 80 --tidy-mark no -quiet` options to command.
+
 ## TODOs
 * Consider adding PGP key (used on Keybase + Github commit verification) to footer of website.
   * e.g. verified way of sending me encrypted message
@@ -25,7 +35,6 @@ Built with [Jekyll](https://jekyllrb.com/) & [Github Pages](https://pages.github
 * Add some explanation of directory layout here in `README`.
 * Add a section to this README (or possibly blog post?) detailing how this website & email server is setup (mailgun, namecheap, github pages, cloudflare, etc).
 * Re-engineer `redirects/`. Specifically, change it so that it's just `r/`, & make it so that each new endpoint created doesn't require a whole new folder to be created. i.e. I'd like to be able to easily add a new line in some file like `new_endpoint: "some_new_endpoint.com"` & `izzygomez.com/r/new_endpoint` should automatically work.
-* Add tooling for auto-formatting of files. e.g. using [`tidy-html5`](https://formulae.brew.sh/formula/tidy-html5#default) for formatting HTML files.
 * If I start writing blog posts again, consider using the [Shiori](https://ellekasai.github.io/shiori/) theme (note: learned of this theme via [kalzumeus.com](https://www.kalzumeus.com/)).
 
 ## Notes
