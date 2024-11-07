@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Redirecting...</title>
+
+    <!-- Necessary scripts -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/detect-mobile.js"></script>
+
+    <!-- Dynamic meta tag setting based on device type -->
+    <script>
+      const isMobile = jQuery.browser.mobile;
+      const sheetURL = "{{ page.sheet_url }}";
+      const redirectURL = isMobile ? "Googlesheets://" + sheetURL : sheetURL;
+
+      var metaelm = document.createElement("meta");
+      metaelm.setAttribute("http-equiv", "refresh");
+      // the number at the beginning of `content` field is second delay for refresh
+      let secondsToRefresh = 0;
+      metaelm.content = secondsToRefresh + "; url=" + redirectURL;
+      document.getElementsByTagName("head")[0].appendChild(metaelm);
+    </script>
+
+    {% if page.icon_path %}
+    <link rel="apple-touch-icon" href="{{ site.url }}{{ page.icon_path }}" />
+    {% endif %}
+  </head>
+  <body>
+    <p>
+      Redirecting... if you are not redirected automatically,
+      <a href="{{ page.sheet_url }}">click here</a>.
+    </p>
+  </body>
+</html>
