@@ -26,9 +26,6 @@ The `-m` flag modifies the file in place. This assumes a [`.tidyrc` file](https:
 * Add "quotes" section to footer
   * see `_data/quotes.yml` & [docs](https://jekyllrb.com/docs/datafiles/) here
   * consider adding quotes from old Wordpress site
-* Update `resume/` with more up-to-date info
-  * consider changing style to `\moderncvstyle{classic}` in latex file.
-  * consider having a `projects/` page that has resume contents in page form
 * Cleanup subdir's here & either delete them or link to them in some capacity on landing page.
 * Include pics (of me?) / maybe feed from socials on landing page? (note: `images/me/` exists now)
 * Create `bookshelf/` (a la https://patrickcollison.com/bookshelf).
