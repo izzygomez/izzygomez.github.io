@@ -1,7 +1,7 @@
 repos:
   # 1. External hooks (pre-commit's built-in collection)
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0 # Specify the latest stable version
+    rev: v5.0.0 # Specify the latest stable version
     hooks:
       - id: trailing-whitespace # Removes trailing whitespace
       - id: end-of-file-fixer # Ensures files end with a single newline

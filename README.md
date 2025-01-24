@@ -28,6 +28,12 @@ To skip `pre-commit` checks for a single commit:
 git commit -n/--no-verify
 ```
 
+To clean out cached `pre-commit` files:
+
+```shell
+pre-commit clean
+```
+
 Note that `package.json` is included in order to power GitHub Actions workflows (TODO implement), but it is not necessary for local development.
 
 ## TODOs
