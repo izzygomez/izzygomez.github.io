@@ -2,13 +2,17 @@
 layout: page
 title: Blog
 ---
-
-<a href="{{ site.url }}"><i class="fa fa-arrow-left" aria-hidden="true"></i> back home</a>
+<a href="{{ site.url }}"
+  ><i class="fa fa-arrow-left" aria-hidden="true"></i> back home</a
+>
 
 <p>> me_irl</p>
 
 <ul>
-{% for post in site.posts %}
-<li>{{ post.date | date_to_string }} &middot; <a href="{{post.url}}">{{ post.title }}</a> </li>
-{% endfor %}
+  {% for post in site.posts %}
+    <li>
+      {{ post.date | date_to_string }} &middot;
+      <a href="{{post.url}}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
 </ul>

@@ -3,9 +3,15 @@ layout: default
 title: "404: Page not found"
 permalink: 404.html
 ---
-
 <h1>404: Page not found</h1>
 <p>Sorry, this URL isn't working.</p>
-<!-- TODO: ideally should open this mailto link in separate tab, but seems like this is broken on Chrome. -->
-<!-- Note: email is only added to this <a> element after `setup.js` runs. This is to obfuscate emails from bots/scrapers.-->
-<p><a href="{{ site.baseurl }}/">Head back home</a>, or please <a id="email" href="">get in touch</a> if something's broken.</p>
+<!--
+  TODO: ideally should open this mailto link in separate tab, but seems like this is broken on Chrome.
+-->
+<!--
+  Note: email is only added to this <a> element after `setup.js` runs. This is to obfuscate emails from bots/scrapers.
+-->
+<p>
+  <a href="{{ site.baseurl }}/">Head back home</a>, or please
+  <a id="email" href="">get in touch</a> if something's broken.
+</p>

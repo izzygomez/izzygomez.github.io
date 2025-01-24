@@ -3,6 +3,7 @@ layout: post
 title: Some Takeaways from Junior Spring
 permalink: blog/takeaways
 ---
+
 Junior spring just ended. Here's a couple takeaways from the semester.
 
 ~
@@ -28,7 +29,7 @@ Turns out abstraction and habitualization are amazingly useful, not only in syst
 
 I also took Computer and Network Security (6.857), a class taught by Ron Rivest (the "R" in both RSA encryption and the CLRS Intro to Algorithms textbook). We learned about basic cryptography, the Diffie-Hellman key exchange, the Bitcoin system, and a many other cool and relevant security topics (i.e. the Apple vs FBI privacy debacle was happening this semester). But if I'm being honest, unless I go work as a security engineer or penetration tester, I'm most likely going to forget about these topics (confession: had to go lookup the Diffie-Hellman name).
 
-A more memorable experience from this class happened sometime during the middle of the term. We came in to normal lecture time on a Thursday morning and were surprised to not see Rivest set up with his slide presentation. The TAs, also unaware of his whereabouts, asked the class to stay put and wait a bit. Half an hour later, Rivest comes in through the front door with shaggy hair and apologizes: "*..shit, sorry class. We all make mistakes. Alright, so elliptic curves...*"
+A more memorable experience from this class happened sometime during the middle of the term. We came in to normal lecture time on a Thursday morning and were surprised to not see Rivest set up with his slide presentation. The TAs, also unaware of his whereabouts, asked the class to stay put and wait a bit. Half an hour later, Rivest comes in through the front door with shaggy hair and apologizes: "_..shit, sorry class. We all make mistakes. Alright, so elliptic curves..._"
 
 There's something oddly inspiring in realizing that a well-educated, Turing award winning, world-renowned MIT professor can also have bad days. This is a man who revolutionized information technology with the RSA encryption scheme, now revealing some part of his humanity to a group of students less than half his age. It's a nice reminder that going through a rough time is perfectly normal.
 

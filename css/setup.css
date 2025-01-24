@@ -3,14 +3,15 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400");
 body {
-    font-family: "Open Sans", "Roboto", "Vollkorn", Georgia, "Times New Roman", Times, serif;
+  font-family: "Open Sans", "Roboto", "Vollkorn", Georgia, "Times New Roman",
+    Times, serif;
 }
 
 /** Making sure that links stay same color (regardless if visited) **/
 a,
 a:visited {
-    text-decoration: underline;
-    color: #fff
+  text-decoration: underline;
+  color: #fff;
 }
 
 /** Positioning for particles-js container **/
@@ -30,8 +31,8 @@ a:visited {
 
 /** Expandable list items CSS **/
 :root {
-  --opaque: rgba(0,0,0,1);
-  --transparent: rgba(0,0,0,0);
+  --opaque: rgba(0, 0, 0, 1);
+  --transparent: rgba(0, 0, 0, 0);
 }
 .li-collapse {
   cursor: pointer;
@@ -49,7 +50,11 @@ a:visited {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: clip;
-  -webkit-mask-image: linear-gradient(to right, var(--opaque) 50%, var(--transparent) 100%);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    var(--opaque) 50%,
+    var(--transparent) 100%
+  );
 }
 .item-hide {
   display: none;
@@ -79,23 +84,23 @@ a:visited {
 
 /** section CSS **/
 .section {
-    padding: 80px 0 20px;
-    font-size: 14px;
-    line-height: 150%
+  padding: 80px 0 20px;
+  font-size: 14px;
+  line-height: 150%;
 }
 .section h1,
 .section h2 {
-    font-size: 36px;
-    margin: 0 0 6px
-    line-height: 1.2;
-    letter-spacing: -.1rem;
-    font-weight: 300;
+  font-size: 36px;
+  margin: 0 0 6px;
+  line-height: 1.2;
+  letter-spacing: -0.1rem;
+  font-weight: 300;
 }
 .section h3 {
-    font-size: 24px;
-    color: #aaa;
-    margin: 0 0 10px;
-    font-weight: 300;
+  font-size: 24px;
+  color: #aaa;
+  margin: 0 0 10px;
+  font-weight: 300;
 }
 .section ul {
   margin-left: 5%;
@@ -104,45 +109,45 @@ a:visited {
   list-style: none;
 }
 .section li {
-    margin: 10px;
+  margin: 10px;
 }
 .section p {
-    text-align: justify;
-    margin-bottom: 16px;
+  text-align: justify;
+  margin-bottom: 16px;
 }
 .section p:last-child {
-    margin-bottom: 0
+  margin-bottom: 0;
 }
 
 /** Color palette CSS **/
 .color-palette {
-    width: 100%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 .color-option {
-    width: 18px;
-    height: 18px;
-    margin: 0 9px 0 9px;
-    cursor: pointer;
-    border-style: solid;
-    border-width: 0;
+  width: 18px;
+  height: 18px;
+  margin: 0 9px 0 9px;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 0;
 }
 .color-option.selected {
-	width: 16px;
-	height: 16px;
-	border-width: 1px;
+  width: 16px;
+  height: 16px;
+  border-width: 1px;
 }
 .color-option[data-palette="light"] {
-    background-color: #fff;
-    border-color: #000;
+  background-color: #fff;
+  border-color: #000;
 }
 .color-option[data-palette="dark"] {
-    background-color: #222;
-    border-color: #fff;
+  background-color: #222;
+  border-color: #fff;
 }
 .color-option[data-palette="sepia"] {
-    background-color: #FFF4DD;
-    border-color: #000;
+  background-color: #fff4dd;
+  border-color: #000;
 }

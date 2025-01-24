@@ -1,6 +1,6 @@
 # Config (https://jekyllrb.com/docs/step-by-step/09-collections/#configuration)
-title:               Izzy Gomez
-url:                 https://izzygomez.com
-email:               izzy@izzygomez.com
+title: Izzy Gomez
+url: https://izzygomez.com
+email: izzy@izzygomez.com
 
-exclude: ['*README.md']
+exclude: ["*README.md"]

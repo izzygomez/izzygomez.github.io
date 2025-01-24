@@ -1,7 +1,10 @@
 <div class="section">
-  <h2> > thoughts </h2>
+  <h2>> thoughts</h2>
 
   {% for post in site.posts %}
-  <span style="font-size: 85%; color: #339933">{{ post.date | date_to_string }}</span> &middot; [{{ post.title }}]({{ post.url }})
+    <span style="font-size: 85%; color: #339933">
+      {{- post.date | date_to_string -}}
+    </span>
+    &middot; [{{ post.title }}]({{ post.url }})
   {% endfor %}
 </div>
