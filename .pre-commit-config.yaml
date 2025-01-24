@@ -1,0 +1,33 @@
+repos:
+  # 1. External hooks (pre-commit's built-in collection)
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0 # Specify the latest stable version
+    hooks:
+      - id: trailing-whitespace # Removes trailing whitespace
+      - id: end-of-file-fixer # Ensures files end with a single newline
+      - id: check-yaml # Validates YAML syntax
+      - id: check-json # Validates JSON syntax
+      - id: check-added-large-files # Prevents large files from being added
+
+  # 2. Prettier setup — will run for all files. See prettier.config.js for
+  # configuration. Note that version numbers specified here must match
+  # those in package.json.
+  #
+  # Using this particular mirror repo because the official one [1] was
+  # deprecated for... what appears to be a holy war — here's a ton of threads
+  # with more context [2][3]. For my purposes, what's important is that this
+  # setup is working as long as I use this mirror repo [4], which is also the
+  # recommendation from conversations in those threads.
+  #
+  # [1] https://github.com/pre-commit/mirrors-prettier
+  # [2] https://github.com/pre-commit/pre-commit.com/pull/957
+  # [3] https://github.com/prettier/prettier/issues/15742
+  # [4] https://github.com/rbubley/mirrors-prettier
+  - repo: https://github.com/rbubley/mirrors-prettier
+    rev: "v3.4.2"
+    hooks:
+      - id: prettier
+        additional_dependencies:
+          - prettier@3.4.2
+          # used for formatting HTML as Liquid files
+          - "@shopify/prettier-plugin-liquid@1.7.0"
