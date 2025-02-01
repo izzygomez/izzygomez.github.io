@@ -21,18 +21,20 @@
         See https://jekyllrb.com/docs/includes/#passing-parameter-variables-to-includes
       {% endcomment %}
       {% capture license_url %}
-      {{ site.url }}/LICENSE.md
+        {{ site.url }}/LICENSE.md
       {% endcapture %}
       {% capture license_url %}
-      {{ site.url }}/LICENSE.md
+        {{ site.url }}/LICENSE.md
       {% endcapture %}
       {%
-        include external.html url=license_url text="&copy; 2015 &ndash; <script type='text/javascript'>
-        document.write(new Date().getFullYear());
-        </script>."
+        include external.html
+        url=license_url
+        text="&copy; 2015 &ndash; <script type='text/javascript'>
+        document.write(new Date().getFullYear());</script>"
+        punctuation="."
       %}
       Code at
-      {% include external.html url="https://git.io/izzy" text="git.io/izzy" %}
+      {% include external.html url="https://git.io/izzy" text="git.io/izzy" punctuation="." %}
     </p>
   </div>
 

@@ -3,14 +3,21 @@
   `url` & `text` are required.
   `id` is optional.
   `new_tab` is optional, defaulting to `true`.
+  `punctuation` is optional punctuation to append to the link; this is to get
+      around weird spacing issues in the rendered HTML.
 {% endcomment %}
-<a
-  id="{{ include.id }}"
-  href="{{ include.url }}"
-  {% unless include.new_tab == false %}
-    target="_blank"
-    rel="noopener noreferrer"
+<span>
+  <a
+    id="{{ include.id }}"
+    href="{{ include.url }}"
+    {% unless include.new_tab == false %}
+      target="_blank"
+      rel="noopener noreferrer"
+    {% endunless %}
+  >
+    {{- include.text -}}
+  </a>
+  {%- unless include.punctuation == '' %}
+    {{- include.punctuation -}}
   {% endunless %}
->
-  {{- include.text -}}
-</a>
+</span>
