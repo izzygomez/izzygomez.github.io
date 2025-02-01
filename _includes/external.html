@@ -1,0 +1,16 @@
+{% comment %}
+  Template for external url links, opening in a new tab.
+  `url` & `text` are required.
+  `id` is optional.
+  `new_tab` is optional, defaulting to `true`.
+{% endcomment %}
+<a
+  id="{{ include.id }}"
+  href="{{ include.url }}"
+  {% unless include.new_tab == false %}
+    target="_blank"
+    rel="noopener noreferrer"
+  {% endunless %}
+>
+  {{- include.text -}}
+</a>

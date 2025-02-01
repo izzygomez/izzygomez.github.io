@@ -1,41 +1,40 @@
 <div class="footer">
-  <div class="footer-icons">
-    <!--
-      TODO: ideally should open this mailto link in separate tab, but seems like this is broken on Chrome.
-    -->
-    <!--
-      Note: email is only added to this <a> element after `setup.js` runs. This is to obfuscate emails from bots/scrapers.
-    -->
-    <a id="email" href=""><i class="fas fa-envelope fa-3x"></i></a>
-    <!--
-      <a href="https://instagram.com/izzyg/" target="_blank"><i class="fab fa-instagram fa-3x"></i></a>
-    -->
-    <a href="https://www.strava.com/athletes/izzygomez/" target="_blank"
-      ><i class="fab fa-strava fa-3x"></i
-    ></a>
-    <a href="https://github.com/izzygomez/" target="_blank"
-      ><i class="fab fa-github fa-3x"></i
-    ></a>
-    <a href="https://linkedin.com/in/izzygomez/" target="_blank"
-      ><i class="fab fa-linkedin-in fa-3x"></i
-    ></a>
-    <a href="https://www.goodreads.com/izzy_gomez" target="_blank"
-      ><i class="fab fa-goodreads fa-3x"></i
-    ></a>
+  <div class="footer-text">
+    <p>
+      <!--
+        Note: ideally this mailto link opens in a separate tab, but seems like this breaks Chrome.
+      -->
+      {% include external.html id="email" new_tab=false url="https://keybase.io/izzy/pgp_keys.asc" text="Email" %}
+      |
+      {% include external.html url="https://keybase.io/izzy/pgp_keys.asc" text="PGP" %}
+      |
+      {% include external.html url="https://linkedin.com/in/izzygomez/" text="LinkedIn" %}
+      |
+      {% include external.html url="https://github.com/izzygomez/" text="Github" %}
+      |
+      {% include external.html url="https://www.strava.com/athletes/izzygomez/" text="Strava" %}
+      |
+      {% include external.html url="https://www.goodreads.com/izzy_gomez" text="Goodreads" %}
+    </p>
+    <p>
+      {% comment %}
+        See https://jekyllrb.com/docs/includes/#passing-parameter-variables-to-includes
+      {% endcomment %}
+      {% capture license_url %}
+      {{ site.url }}/LICENSE.md
+      {% endcapture %}
+      {% capture license_url %}
+      {{ site.url }}/LICENSE.md
+      {% endcapture %}
+      {%
+        include external.html url=license_url text="&copy; 2015 &ndash; <script type='text/javascript'>
+        document.write(new Date().getFullYear());
+        </script>."
+      %}
+      Code at
+      {% include external.html url="https://git.io/izzy" text="git.io/izzy" %}
+    </p>
   </div>
 
-  <p>
-    <a
-      href="{{ site.url }}/LICENSE.md"
-      target="_blank"
-      rel="noopener noreferrer"
-      >Copyright &copy; 2015 -
-      <script type="text/javascript">
-        document.write(new Date().getFullYear());
-      </script>
-    </a>
-    Izzy Gomez. Source at
-    <a href="https://git.io/izzy" target="_blank">git.io/izzy</a>
-  </p>
   {% include color_palette.html %}
 </div>

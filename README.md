@@ -38,19 +38,15 @@ Note that `package.json` is included in order to power GitHub Actions workflows 
 
 ## TODOs
 
-- Consider adding PGP key (used on Keybase + Github commit verification) to footer of website.
-  - e.g. verified way of sending me encrypted message
 - Add "quotes" section to footer
   - see `_data/quotes.yml` & [docs](https://jekyllrb.com/docs/datafiles/) here
   - consider adding quotes from old Wordpress site
 - Cleanup subdir's here & either delete them or link to them in some capacity on landing page.
-- Include pics (of me?) / maybe feed from socials on landing page? (note: `images/me/` exists now)
 - Create `bookshelf/` (a la https://patrickcollison.com/bookshelf).
 - Add some explanation of directory layout here in `README`.
 - Add a section to this README (or possibly blog post?) detailing how this website & email server is setup (mailgun, namecheap, github pages, cloudflare, etc).
 - Re-engineer `redirects/`. Specifically, change it so that it's just `r/`, & make it so that each new endpoint created doesn't require a whole new folder to be created. i.e. I'd like to be able to easily add a new line in some file like `new_endpoint: "some_new_endpoint.com"` & `izzygomez.com/r/new_endpoint` should automatically work.
 - If I start writing blog posts again, consider using the [Shiori](https://ellekasai.github.io/shiori/) theme (note: learned of this theme via [kalzumeus.com](https://www.kalzumeus.com/)).
-- Consider adding "built by [jekyll](https://jekyllrb.com/)" or something like that to website footer
 - Implement Github Actions to mirror local auto formatting.
 
 ## Notes

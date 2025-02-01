@@ -5,6 +5,12 @@
 body {
   font-family: "Open Sans", "Roboto", "Vollkorn", Georgia, "Times New Roman",
     Times, serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /** Making sure that links stay same color (regardless if visited) **/
@@ -12,6 +18,7 @@ a,
 a:visited {
   text-decoration: underline;
   color: #fff;
+  text-decoration-style: dotted;
 }
 
 /** Positioning for particles-js container **/
@@ -19,17 +26,30 @@ a:visited {
   position: fixed;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 /** Positioning for main content container **/
 .container {
-  max-width: 600px;
-  position: relative;
-  width: 90%;
-  margin: auto;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Centers content vertically */
+  min-height: 100vh; /* Makes sure it takes full viewport height */
+  max-width: 450px;
+}
+
+/** Profile picture container **/
+.profile-pic {
+  display: flex;
+  justify-content: left;
+  height: 200px;
+  border-radius: 24px;
 }
 
 /** Expandable list items CSS **/
+/* TODO delete all this, no longer used */
 :root {
   --opaque: rgba(0, 0, 0, 1);
   --transparent: rgba(0, 0, 0, 0);
@@ -65,31 +85,40 @@ a:visited {
 
 /** footer CSS **/
 .footer {
-  text-align: center;
+  border-top: 1px solid #ccc;
+  text-align: left;
   padding: 0 0 20px 0;
   color: #aaa;
   font-size: 14px;
   line-height: 150%;
   display: flex;
   flex-flow: column;
-  align-items: center;
+  align-items: left;
 }
 .footer-icons {
-  padding: 20px 0 0 0;
+  padding: 10px 0 0 0;
   border-top: 1px solid #ccc;
 }
 .footer i {
   padding: 10px 10px 0px 10px;
 }
 
+.footer-text {
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+.footer-text p {
+  margin: 0;
+}
+
 /** section CSS **/
+/* TODO see if I can delete most of this too */
 .section {
-  padding: 80px 0 20px;
   font-size: 14px;
   line-height: 150%;
 }
-.section h1,
-.section h2 {
+.section h1 {
   font-size: 36px;
   margin: 0 0 6px;
   line-height: 1.2;
@@ -113,23 +142,19 @@ a:visited {
 }
 .section p {
   text-align: justify;
-  margin-bottom: 16px;
-}
-.section p:last-child {
-  margin-bottom: 0;
 }
 
 /** Color palette CSS **/
 .color-palette {
   width: 100%;
   display: flex;
-  align-content: center;
-  justify-content: center;
+  align-content: left;
+  justify-content: left;
 }
 .color-option {
   width: 18px;
   height: 18px;
-  margin: 0 9px 0 9px;
+  margin: 0 18px 0 0;
   cursor: pointer;
   border-style: solid;
   border-width: 0;
