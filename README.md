@@ -7,7 +7,6 @@ Always a work in progress™️
 Built with [Jekyll](https://jekyllrb.com/) & [Github Pages](https://pages.github.com/).
 
 1. Clone the repo: `git clone https://github.com/izzygomez/izzygomez.github.io`
-1. Initialize & download submodules: `git submodule update --init --recursive`
 1. Install local `pre-commit` hooks: `pre-commit install`
    - This assumes `pre-commit` is installed; can install via `pip`, but I prefer [a `brew` install](https://github.com/izzygomez/mac-setup/commit/a18444b8f792dee0d7236dcb3af9bd529d0a3e14).
 1. Run local server & view at `localhost:4000`: `jekyll s`
