@@ -5,7 +5,7 @@
 body {
   font-family: "Open Sans", "Roboto", "Vollkorn", Georgia, "Times New Roman",
     Times, serif;
-  height: 100%;
+  min-height: 100dvh;
   margin: 0;
   padding: 0;
   display: flex;
@@ -36,7 +36,7 @@ a:visited {
   display: flex;
   flex-direction: column; /* Stack children vertically */
   justify-content: center; /* Centers content vertically */
-  min-height: 100vh; /* Makes sure it takes full viewport height */
+  min-height: 100dvh; /* Makes sure it's full (dynamic) viewport height */
   width: 90%;
   max-width: 450px;
   margin: 0 auto;
@@ -46,8 +46,10 @@ a:visited {
 .profile-pic {
   display: flex;
   justify-content: left;
+  margin-top: 20px;
 }
 .profile-pic img {
+  margin: 0;
   border-radius: 24px;
   max-width: 200px;
   height: auto;
@@ -93,7 +95,7 @@ a:visited {
 .footer {
   border-top: 1px solid #ccc;
   text-align: left;
-  padding: 0 0 20px 0;
+  margin-bottom: 20px;
   color: #aaa;
   font-size: 14px;
   line-height: 150%;
