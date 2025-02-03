@@ -140,18 +140,11 @@ function setColor(c, smooth_transition = true) {
     $("body").css("transition-timing-function", "ease-in-out");
 
     $("a,a\\:visited").css("transition", "color 1.5s ease-in-out");
-
-    $(".section h3, .section:last-child").css(
-      "transition",
-      "color 1.5s ease-in-out",
-    );
   }
   $("body").css("color", text_c);
   $("body").css("background", bg_c);
 
   $("a,a\\:visited").css("color", text_c);
-
-  $(".section h3, .section:last-child").css("color", header_c);
 }
 
 function setCookie(c) {
@@ -162,53 +155,6 @@ function setCookie(c) {
   var expires = "; expires=" + date.toUTCString();
   // finally create cookie
   document.cookie = "background-color=" + c + expires + "; path=/";
-}
-
-var HASH = "#";
-var ITEM_FADE = "item-fade";
-var ITEM_HIDE = "item-hide";
-var ITEMS_LINKS_NOT_CLICKABLE = "items-links-not-clickable";
-var SELECTOR_LI_COLLAPSE = ".li-collapse";
-var SELECTOR_LI_CONTENT = ".li-content";
-var SELECTOR_LI_EXPAND = ".li-expand";
-var SPACE = " ";
-function expandAndRemoveFade(listItemId) {
-  var liContent = document.querySelector(
-    HASH + listItemId + SPACE + SELECTOR_LI_CONTENT,
-  );
-  var liEllipsis = document.querySelector(
-    HASH + listItemId + SPACE + SELECTOR_LI_EXPAND,
-  );
-  var collapseArrow = document.querySelector(
-    HASH + listItemId + SPACE + SELECTOR_LI_COLLAPSE,
-  );
-
-  var inFadedMode = liContent.classList.contains(ITEM_FADE);
-  if (inFadedMode) {
-    liContent.classList.remove(ITEM_FADE);
-    liContent.classList.remove(ITEMS_LINKS_NOT_CLICKABLE);
-    liEllipsis.classList.add(ITEM_HIDE);
-    collapseArrow.classList.remove(ITEM_HIDE);
-  }
-}
-function collapseAndAddFade(listItemId) {
-  var liContent = document.querySelector(
-    HASH + listItemId + SPACE + SELECTOR_LI_CONTENT,
-  );
-  var liEllipsis = document.querySelector(
-    HASH + listItemId + SPACE + SELECTOR_LI_EXPAND,
-  );
-  var collapseArrow = document.querySelector(
-    HASH + listItemId + SPACE + SELECTOR_LI_COLLAPSE,
-  );
-
-  var inFadedMode = liContent.classList.contains(ITEM_FADE);
-  if (!inFadedMode) {
-    liContent.classList.add(ITEM_FADE);
-    liContent.classList.add(ITEMS_LINKS_NOT_CLICKABLE);
-    liEllipsis.classList.remove(ITEM_HIDE);
-    collapseArrow.classList.add(ITEM_HIDE);
-  }
 }
 
 // Check if a cookie with color settings exist

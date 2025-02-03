@@ -40,6 +40,14 @@ a:visited {
   width: 90%;
   max-width: 450px;
   margin: 0 auto;
+
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.container p {
+  margin-top: 0px;
+  margin-bottom: 14px;
 }
 
 /** Profile picture container **/
@@ -54,41 +62,6 @@ a:visited {
   max-width: 200px;
   height: auto;
   display: block;
-}
-
-/** Expandable list items CSS **/
-/* TODO delete all this, no longer used */
-:root {
-  --opaque: rgba(0, 0, 0, 1);
-  --transparent: rgba(0, 0, 0, 0);
-}
-.li-collapse {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-}
-.li-expand {
-  vertical-align: top;
-  cursor: pointer;
-}
-.item-fade {
-  cursor: pointer;
-  display: inline-block;
-  max-width: 95%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: clip;
-  -webkit-mask-image: linear-gradient(
-    to right,
-    var(--opaque) 50%,
-    var(--transparent) 100%
-  );
-}
-.item-hide {
-  display: none;
-}
-.items-links-not-clickable > a {
-  pointer-events: none;
 }
 
 /** footer CSS **/
@@ -110,46 +83,12 @@ a:visited {
 .footer i {
   padding: 10px 10px 0px 10px;
 }
-
 .footer-text {
   margin-top: 14px;
   margin-bottom: 14px;
 }
-
 .footer-text p {
   margin: 0;
-}
-
-/** section CSS **/
-/* TODO see if I can delete most of this too */
-.section {
-  font-size: 14px;
-  line-height: 150%;
-}
-.section h1 {
-  font-size: 36px;
-  margin: 0 0 6px;
-  line-height: 1.2;
-  letter-spacing: -0.1rem;
-  font-weight: 300;
-}
-.section h3 {
-  font-size: 24px;
-  color: #aaa;
-  margin: 0 0 10px;
-  font-weight: 300;
-}
-.section ul {
-  margin-left: 5%;
-  margin-right: 5%;
-  padding: 0;
-  list-style: none;
-}
-.section li {
-  margin: 10px;
-}
-.section p {
-  text-align: justify;
 }
 
 /** Color palette CSS **/
