@@ -202,6 +202,14 @@ $(document).on("click", '.color-option[data-palette="sepia"]', function () {
 
 // Email obfuscation
 // see: https://css-tricks.com/how-to-safely-share-your-email-address-on-a-website/
-var encodedEmail = "aXp6eUBpenp5Z29tZXouY29t"; // should be {{ site.email }}
-const emailElement = document.getElementById("email");
-emailElement.setAttribute("href", "mailto:".concat(atob(encodedEmail)));
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(() => {
+    // should be {{ site.email }}
+    var encodedEmail = "aXp6eUBpenp5Z29tZXouY29t";
+    // Select all elements with class "email"
+    const emailElements = document.querySelectorAll(".email");
+    emailElements.forEach((emailElement) => {
+      emailElement.setAttribute("href", "mailto:".concat(atob(encodedEmail)));
+    });
+  }, 1000); // Delay de-obfuscating email for 1 second
+});

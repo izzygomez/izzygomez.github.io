@@ -1,13 +1,14 @@
 {% comment %}
   Template for external url links, opening in a new tab.
   `url` & `text` are required.
-  `id` is optional.
+  `class` & `id` are optional.
   `new_tab` is optional, defaulting to `true`.
   `punctuation` is optional punctuation to append to the link; this is to get
       around weird spacing issues in the rendered HTML.
 {% endcomment %}
 <span>
   <a
+    class="{{ include.class }}"
     id="{{ include.id }}"
     href="{{ include.url }}"
     {% unless include.new_tab == false %}

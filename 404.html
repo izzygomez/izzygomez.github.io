@@ -6,12 +6,10 @@ permalink: 404.html
 <h1>404: Page not found</h1>
 <p>Sorry, this URL isn't working.</p>
 <!--
-  TODO: ideally should open this mailto link in separate tab, but seems like this is broken on Chrome.
--->
-<!--
-  Note: email is only added to this <a> element after `index.js` runs. This is to obfuscate emails from bots/scrapers.
+  Note: ideally this mailto link opens in a separate tab, but seems like this breaks Chrome.
 -->
 <p>
   <a href="{{ site.baseurl }}/">Head back home</a>, or please
-  <a id="email" href="">get in touch</a> if something's broken.
+  {% include external.html class="email" new_tab=false url="" text="get in touch" %}
+  if something's broken.
 </p>
