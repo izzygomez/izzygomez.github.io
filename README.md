@@ -48,6 +48,7 @@ Note that `package.json` is included in order to power GitHub Actions workflows 
 - Re-engineer `redirects/`. Specifically, change it so that it's just `r/`, & make it so that each new endpoint created doesn't require a whole new folder to be created. i.e. I'd like to be able to easily add a new line in some file like `new_endpoint: "some_new_endpoint.com"` & `izzygomez.com/r/new_endpoint` should automatically work.
 - If I start writing blog posts again, consider using the [Shiori](https://ellekasai.github.io/shiori/) theme (note: learned of this theme via [kalzumeus.com](https://www.kalzumeus.com/)).
 - Implement Github Actions to mirror local auto formatting.
+- Use this [last modified plugin](https://github.com/gjtorikian/jekyll-last-modified-at) on posts.
 
 ## Notes
 
