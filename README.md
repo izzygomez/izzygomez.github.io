@@ -10,7 +10,11 @@ Built with [Jekyll](https://jekyllrb.com/) & [Github Pages](https://pages.github
 1. Install local `pre-commit` hooks: `pre-commit install`
    - This assumes `pre-commit` is installed; can install via `pip`, but I prefer [a `brew` install](https://github.com/izzygomez/mac-setup/commit/a18444b8f792dee0d7236dcb3af9bd529d0a3e14).
 1. Run local server & view at `localhost:4000`: `jekyll s`
-1. To test on mobile devices ([inspo](https://www.joshwcomeau.com/blog/local-testing-on-an-iphone/)) with `ngrok`: `ngrok http http://localhost:4000`
+1. To test on mobile devices ([inspo](https://www.joshwcomeau.com/blog/local-testing-on-an-iphone/)) with `ngrok` (using my static URL), & access via izzygomez.com/r/dev:
+
+```shell
+ngrok http --url=merely-full-gnat.ngrok-free.app 4000 --oauth google --oauth-allow-email {MY_GMAIL}
+```
 
 ## Auto-formatting
 
