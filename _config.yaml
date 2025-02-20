@@ -4,3 +4,7 @@ url: https://izzygomez.com
 email: izzy@izzygomez.com
 
 exclude: ["*README.md"]
+
+# Custom collections folder to not have root directory too cluttered
+# https://jekyllrb.com/docs/collections/
+collections_dir: collections
