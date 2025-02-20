@@ -2,6 +2,18 @@
 @import url("https://fonts.googleapis.com/css?family=Vollkorn|VT323");
 @import url("https://fonts.googleapis.com/css?family=Roboto:400");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400");
+
+:root {
+  /* Used when toggling between dark & light themes */
+  --transition-time: 1.5s;
+
+  --dark-bg: #222222;
+  --dark-text: #ffffff;
+
+  --light-bg: #fff4dd;
+  --light-text: #42210b;
+}
+
 body {
   font-family: "Open Sans", "Roboto", "Vollkorn", Georgia, "Times New Roman",
     Times, serif;
@@ -11,14 +23,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition:
+    background var(--transition-time) ease-in-out,
+    color var(--transition-time) ease-in-out;
 }
 
 /** Making sure that links stay same color (regardless if visited) **/
 a,
 a:visited {
   text-decoration: underline;
-  color: #fff;
   text-decoration-style: dotted;
+
+  color: var(--text-color);
+  transition: color var(--transition-time) ease-in-out;
 }
 
 /** Positioning for main content container **/
@@ -34,7 +53,6 @@ a:visited {
   font-size: 14px;
   line-height: 150%;
 }
-
 .container p {
   margin-top: 0px;
   margin-bottom: 14px;
@@ -81,8 +99,8 @@ a:visited {
   margin: 0;
 }
 
-/** Color palette CSS **/
-.color-palette {
+/** Color theme **/
+.color-theme {
   width: 100%;
   display: flex;
   align-content: left;
@@ -101,15 +119,19 @@ a:visited {
   height: 16px;
   border-width: 1px;
 }
-.color-option[data-palette="light"] {
-  background-color: #fff;
-  border-color: #000;
+/* Dark Mode */
+[data-theme="dark"],
+.color-option[theme-option="dark"] {
+  --bg-color: var(--dark-bg);
+  --text-color: var(--dark-text);
+  background-color: var(--dark-bg);
+  border-color: var(--light-bg);
 }
-.color-option[data-palette="dark"] {
-  background-color: #222;
-  border-color: #fff;
-}
-.color-option[data-palette="sepia"] {
-  background-color: #fff4dd;
-  border-color: #000;
+/* Light Mode */
+[data-theme="light"],
+.color-option[theme-option="light"] {
+  --bg-color: var(--light-bg);
+  --text-color: var(--light-text);
+  background-color: var(--light-bg);
+  border-color: var(--dark-bg);
 }

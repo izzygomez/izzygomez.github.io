@@ -21,6 +21,21 @@
     href="{{ site.baseurl }}/icons/game-of-life-glider.svg"
   >
 
+  <!-- Scripts -->
+  <!--
+    Script that runs immediately to set theme correctly before rendering.
+    This addresses "flickering" issue that can occur when the page loads.
+
+    Currently defaults to: DARK.
+    If this is changed, also update code in js/index.js
+  -->
+  <script>
+    (function () {
+      var savedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+
   <!-- Google tag (gtag.js) -->
   <script
     async
@@ -35,4 +50,11 @@
 
     gtag('config', 'G-NM7SW4SC94');
   </script>
+
+  <!--
+    Load other scripts with `defer` to not block rendering. note that scripts
+    will run in the order they're listed.
+  -->
+  <script defer src="/js/jquery.min.js"></script>
+  <script defer src="/js/index.js"></script>
 </head>
