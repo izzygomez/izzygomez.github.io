@@ -46,13 +46,21 @@ Note that `package.json` is included in order to power GitHub Actions workflows 
   - see `_data/quotes.yml` & [docs](https://jekyllrb.com/docs/datafiles/) here
   - consider adding quotes from old Wordpress site
 - Cleanup subdir's here & either delete them or link to them in some capacity on landing page.
-- Create `bookshelf/` (a la https://patrickcollison.com/bookshelf).
 - Add some explanation of directory layout here in `README`.
 - Add a section to this README (or possibly blog post?) detailing how this website & email server is setup (mailgun, namecheap, github pages, cloudflare, etc).
 - Re-engineer `redirects/`. Specifically, change it so that it's just `r/`, & make it so that each new endpoint created doesn't require a whole new folder to be created. i.e. I'd like to be able to easily add a new line in some file like `new_endpoint: "some_new_endpoint.com"` & `izzygomez.com/r/new_endpoint` should automatically work.
 - If I start writing blog posts again, consider using the [Shiori](https://ellekasai.github.io/shiori/) theme (note: learned of this theme via [kalzumeus.com](https://www.kalzumeus.com/)).
 - Implement Github Actions to mirror local auto formatting.
 - Use this [last modified plugin](https://github.com/gjtorikian/jekyll-last-modified-at) on posts.
+- Books:
+  - Finish writing `books/why.md`.
+  - Consider linking from front page.
+  - Finish importing old book reviews from Goodreads.
+    - Maybe edit wording that I usually add where I give "star" rating since that's specific to Goodreads & I'm no longer bound by that.
+    - Make sure that HTML content from Goodreads review is converted to markdown when publishing here.
+    - Optional: create script to automatically copy generated HTML from markdown files here to upload to Goodreads (if I choose to continue using that platform).
+  - Consider using the last modified plugin on book reviews to show when review has been updated.
+- Consider migrating as much of site as possible to markdown files, so that it's easier to edit. Don't know if this is quite true, but anything outside `_includes/` & `_layouts/` seems fair game.
 
 ## Notes
 

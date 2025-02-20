@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<h2>{{ page.title }} by {{ page.author }}</h2>
+{% if page.read_start and page.read_end %}
+  <p>
+    <i>
+      read from {{ page.read_start | date_to_string: 'ordinal', 'US' }} to
+      {{ page.read_end | date_to_string: 'ordinal', 'US' }}
+    </i>
+  </p>
+{% endif %}
+{% if page.goodreads_url %}
+  <p><a href="{{ page.goodreads_url }}">goodreads link</a></p>
+{% endif %}
+<p>
+  Published
+  {{ page.date | date_to_string: 'ordinal', 'US' }}
+</p>
+{{ content }}
