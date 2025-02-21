@@ -13,7 +13,8 @@
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
+  <link rel="preload" href="/css/style.css" as="style">
+  <link rel="stylesheet" href="/css/style.css">
 
   <!-- Icons -->
   <link
@@ -31,8 +32,8 @@
   -->
   <script>
     (function () {
-      var savedTheme = localStorage.getItem('theme') || 'dark';
-      document.documentElement.setAttribute('data-theme', savedTheme);
+      var savedTheme = localStorage.getItem('color-theme') || 'dark';
+      document.documentElement.setAttribute('color-theme', savedTheme);
     })();
   </script>
 

@@ -2,6 +2,10 @@
 <html lang="en">
   {% include head.html %}
   <body>
+    <script>
+      /* to prevent Firefox FOUC, this must be here */
+      let FF_FOUC_FIX;
+    </script>
     <div class="container">
       {{ content }}
       {% include footer.html %}
