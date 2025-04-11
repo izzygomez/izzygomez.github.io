@@ -61,7 +61,3 @@ Note that `package.json` is included in order to power GitHub Actions workflows 
     - Optional: create script to automatically copy generated HTML from markdown files here to upload to Goodreads (if I choose to continue using that platform).
   - Consider using the [last modified plugin](https://github.com/gjtorikian/jekyll-last-modified-at) on book reviews to show when review has been updated.
   - Consider engineering a "b/" shortlink for books.
-
-## Notes
-
-- Ideally would update `master` branch name to `main` ([context](https://github.blog/changelog/2020-10-01-the-default-branch-for-newly-created-repositories-is-now-main/)) but [git.io/izzy](https://git.io/izzy) redirects to `master` & [can't be edited anymore](https://github.blog/changelog/2022-04-25-git-io-deprecation/) — & I like that succinct, aesthetic link in the website footer 🫠.
