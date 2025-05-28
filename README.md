@@ -61,3 +61,4 @@ Note that `package.json` is included in order to power GitHub Actions workflows 
     - Optional: create script to automatically copy generated HTML from markdown files here to upload to Goodreads (if I choose to continue using that platform).
   - Consider using the [last modified plugin](https://github.com/gjtorikian/jekyll-last-modified-at) on book reviews to show when review has been updated.
   - Consider engineering a "b/" shortlink for books.
+  - Create something like `/train` or `/runs` or `/fit` to link to from strava bio ("izzy.gg/train"); should be fitness related page.
