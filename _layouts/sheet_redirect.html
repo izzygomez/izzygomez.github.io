@@ -21,10 +21,6 @@
       metaelm.content = secondsToRefresh + '; url=' + redirectURL;
       document.getElementsByTagName('head')[0].appendChild(metaelm);
     </script>
-
-    {% if page.icon_path %}
-      <link rel="apple-touch-icon" href="{{ site.url }}{{ page.icon_path }}">
-    {% endif %}
   </head>
   <body>
     <p>
