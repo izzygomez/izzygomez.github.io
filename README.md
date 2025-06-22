@@ -14,7 +14,7 @@ Built with [Jekyll](https://jekyllrb.com/) & [Github Pages](https://pages.github
 
 ```shell
 ngrok http --url=merely-full-gnat.ngrok-free.app 4000 --oauth google --oauth-allow-email {MY_GMAIL}
-# access via izzygomez.com/r/dev
+# access via izzygomez.com/dev
 ```
 
 ## Auto-formatting
