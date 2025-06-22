@@ -1,6 +1,6 @@
 # Izzy's Personal Website ✨
 
-Always a work in progress™️
+Always a work in progress.
 
 ## Development
 
