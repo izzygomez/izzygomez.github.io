@@ -12,6 +12,9 @@
 
   --light-bg: #fff4dd;
   --light-text: #42210b;
+
+  --light-gray: #cccccc;
+  --medium-gray: #aaaaaa;
 }
 
 /*
@@ -85,23 +88,26 @@ a.loaded {
 /** Profile picture container **/
 .profile-pic {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   margin-top: 20px;
 }
 .profile-pic img {
   margin: 0;
-  border-radius: 24px;
+  border-radius: 50%;
   max-width: 200px;
-  height: auto;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
   display: block;
+  border: 1px solid var(--medium-gray);
 }
 
 /** footer CSS **/
 .footer {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--light-gray);
   text-align: left;
   margin-bottom: 20px;
-  color: #aaa;
+  color: var(--medium-gray);
   font-size: 14px;
   line-height: 150%;
   display: flex;
@@ -110,7 +116,7 @@ a.loaded {
 }
 .footer-icons {
   padding: 10px 0 0 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--light-gray);
 }
 .footer i {
   padding: 10px 10px 0px 10px;
