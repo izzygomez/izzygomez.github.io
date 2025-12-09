@@ -17,31 +17,14 @@ ngrok http --url=merely-full-gnat.ngrok-free.app 4000 --oauth google --oauth-all
 # access via izzygomez.com/dev
 ```
 
-## Auto-formatting
+## Pre-commit
 
-This repo uses [`pre-commit`](https://pre-commit.com/) to automatically format & lint files before they are committed. The formatting is powered by [`prettier`](https://prettier.io/docs/en/), with support for [Liquid](https://shopify.github.io/liquid/) Jekyll templates using the [@shopify/prettier-plugin-liquid](https://www.npmjs.com/package/@shopify/prettier-plugin-liquid) plugin. See `.pre-commit-config.yaml` & `prettier.config.js` for configuration notes & details.
-
-Setup `pre-commit` per install instructions above. If at any point you'd like to run `pre-commit` against all files, run:
-
-```shell
-pre-commit run --all-files --verbose
-```
-
-To skip `pre-commit` checks for a single commit:
-
-```shell
-git commit -n/--no-verify
-```
-
-To clean out cached `pre-commit` files:
-
-```shell
-pre-commit clean
-```
+This repo uses [`pre-commit`](https://pre-commit.com/) to automatically format & lint files before they are committed, & also as part of the required checks before a PR can be merged. See `.pre-commit-config.yaml` for configuration details.
 
 Note that `package.json` is included in order to power GitHub Actions workflows (TODO implement), but it is not necessary for local development.
 
-## TODOs
+<details>
+<summary><h2>TODOs</h2></summary>
 
 - Add "quotes" section to footer
   - see `_data/quotes.yml` & [docs](https://jekyllrb.com/docs/datafiles/) here
@@ -62,3 +45,5 @@ Note that `package.json` is included in order to power GitHub Actions workflows 
   - Consider using the [last modified plugin](https://github.com/gjtorikian/jekyll-last-modified-at) on book reviews to show when review has been updated.
   - Consider engineering a "b/" shortlink for books.
   - Create something like `/train` or `/runs` or `/fit` to link to from strava bio ("izzy.gg/train"); should be fitness related page.
+  - Consider adding a successful "github pages deploy" step to the required checks before PR can be merged.
+  </details>

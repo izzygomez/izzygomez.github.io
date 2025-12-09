@@ -5,6 +5,7 @@
 # - `pre-commit run --all-files --verbose` to run the hooks manually.
 # - `git commit -n/--no-verify` to skip the hooks.
 # - `pre-commit autoupdate` to update the hooks to the latest version.
+# - `pre-commit clean` to clean out cached files.
 # - In hooks configurations below with `files` & `exclude` options set: to
 #   enumerate all files that will be processed by the hook, run:
 #   `git ls-files | grep -E '{files}' | grep -v -E '{exclude}'`
@@ -29,8 +30,7 @@ repos:
       - id: trailing-whitespace
 
   # 2. Prettier setup — will run for all files. See prettier.config.js for
-  # configuration. Note that version numbers specified here must match
-  # those in package.json.
+  # configuration.
   #
   # Using this particular mirror repo because the official one [1] was
   # deprecated for... what appears to be a holy war — here's a ton of threads
