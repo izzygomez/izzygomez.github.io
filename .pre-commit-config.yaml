@@ -13,7 +13,7 @@
 #   files to exclude.
 
 repos:
-  # 1. Pre-commit's built-in collection
+  # Pre-commit's built-in collection
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:
@@ -29,7 +29,7 @@ repos:
       - id: no-commit-to-branch
       - id: trailing-whitespace
 
-  # 2. Prettier setup — will run for all files. See prettier.config.js for
+  # Prettier setup — will run for all files. See prettier.config.js for
   # configuration.
   #
   # Using this particular mirror repo because the official one [1] was
@@ -47,6 +47,6 @@ repos:
     hooks:
       - id: prettier
         additional_dependencies:
-          - prettier@3.4.2
+          - prettier@3.7.4
           # used for formatting HTML as Liquid files
           - "@shopify/prettier-plugin-liquid@1.7.0"
