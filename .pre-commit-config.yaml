@@ -47,6 +47,6 @@ repos:
     hooks:
       - id: prettier
         additional_dependencies:
-          - prettier@3.4.2
+          - prettier@3.7.4
           # used for formatting HTML as Liquid files
           - "@shopify/prettier-plugin-liquid@1.7.0"
