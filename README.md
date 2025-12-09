@@ -21,8 +21,6 @@ ngrok http --url=merely-full-gnat.ngrok-free.app 4000 --oauth google --oauth-all
 
 This repo uses [`pre-commit`](https://pre-commit.com/) to automatically format & lint files before they are committed, & also as part of the required checks before a PR can be merged. See `.pre-commit-config.yaml` for configuration details.
 
-Note that `package.json` is included in order to power GitHub Actions workflows (TODO implement), but it is not necessary for local development.
-
 <details>
 <summary><h2>TODOs</h2></summary>
 
