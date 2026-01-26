@@ -44,7 +44,7 @@ repos:
   # [3] https://github.com/prettier/prettier/issues/15742
   # [4] https://github.com/rbubley/mirrors-prettier
   - repo: https://github.com/rbubley/mirrors-prettier
-    rev: "v3.7.4"
+    rev: "v3.8.1"
     hooks:
       - id: prettier
         additional_dependencies:
