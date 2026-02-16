@@ -1,5 +1,7 @@
 # Izzy's Personal Website ✨
 
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+
 Always a work in progress.
 
 ## Development
@@ -16,10 +18,6 @@ Built with [Jekyll](https://jekyllrb.com/) & [Github Pages](https://pages.github
 ngrok http --url=merely-full-gnat.ngrok-free.app 4000 --oauth google --oauth-allow-email {MY_GMAIL}
 # access via izzygomez.com/dev
 ```
-
-## Pre-commit
-
-This repo uses [`pre-commit`](https://pre-commit.com/) to automatically format & lint files before they are committed, & also as part of the required checks before a PR can be merged via [pre-commit.ci](https://pre-commit.ci/). See `.pre-commit-config.yaml` for configuration details.
 
 <details>
 <summary><h2>TODOs</h2></summary>
