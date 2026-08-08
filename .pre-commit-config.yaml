@@ -1,8 +1,9 @@
+################################################################################
 # See pre-commit.com for documentation.
 #
 # Some helpful commands:
 # - `pre-commit install` to install the hooks.
-# - `pre-commit run --all-files --verbose` to run the hooks manually.
+# - `pre-commit run -a/--all-files [--verbose]` to run the hooks manually.
 # - `git commit -n/--no-verify` to skip the hooks.
 # - `pre-commit autoupdate` to update the hooks to the latest version.
 # - `pre-commit clean` to clean out cached files.
@@ -11,14 +12,15 @@
 #   `git ls-files | grep -E '{files}' | grep -v -E '{exclude}'`
 #   where {files} is the regex of files to process, & {exclude} is the regex of
 #   files to exclude.
+################################################################################
 
 # https://pre-commit.ci/ configuration
 ci:
-  autofix_prs: false
+  autofix_prs: false # this doesn't work well with stacked PRs
   autoupdate_schedule: monthly
 
 repos:
-  # Pre-commit's built-in collection
+  # pre-commit-hooks — general file checks
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:
@@ -35,8 +37,9 @@ repos:
       - id: no-commit-to-branch
       - id: trailing-whitespace
 
-  # Prettier setup — will run for all files. See prettier.config.js for
-  # configuration.
+  # Prettier — multi-language formatting
+  #
+  # Runs on all files. See prettier.config.js for configuration.
   #
   # Using this particular mirror repo because the official one [1] was
   # deprecated for... what appears to be a holy war — here's a ton of threads
@@ -52,8 +55,16 @@ repos:
     rev: "v3.9.6"
     hooks:
       - id: prettier
+        # `additional_dependencies` is NOT bumped by pre-commit autoupdate (it
+        # only updates `rev` above), so these pins are manually maintained.
+        #
+        # Keep `prettier` version below in sync with the `rev` version above.
+        #
+        # The Liquid plugin lets Prettier format HTML as Liquid templates; check
+        # its latest version & compatibility with prettier (`peerDependencies`
+        # inside `package.json`) at:
+        # https://www.npmjs.com/package/@shopify/prettier-plugin-liquid
         additional_dependencies:
-          - prettier@3.7.4
-          # used for formatting HTML as Liquid files
-          - "@shopify/prettier-plugin-liquid@1.7.0"
-        exclude: "^js/jquery.min.js$"
+          - prettier@3.9.6 # keep in sync with `rev` above
+          - "@shopify/prettier-plugin-liquid@1.11.0"
+        exclude: '^js/jquery\.min\.js$'
